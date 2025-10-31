@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Jan Novák</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* === Layout === */
+    header {
+      background-color: white;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #0078D4;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #0078D4;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* === Hero === */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: radial-gradient(circle at top right, #eaf4ff 0%, #f9f9f9 60%);
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* === O mně === */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #0078D4;
+    }
+    .about p {
+      color: #444;
+      max-width: 700px;
+    }
+
+    /* === Projekty === */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .project-card h4 {
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+    .project-card p {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    /* Barevné varianty tagů */
+    .tag.hardware { background: #FFF3E0; color: #E65100; }
+    .tag.web { background: #E3F2FD; color: #1565C0; }
+    .tag.backend { background: #E8F5E9; color: #2E7D32; }
+    .tag.other { background: #F2F2F2; color: #555; }
+
+    /* === Blog === */
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .blog-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .blog-card h4 {
+      color: #111;
+      margin-bottom: 0.5rem;
+    }
+    .blog-card p {
+      color: #555;
+    }
+
+    /* === Kontakt === */
+    .contact-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #ddd;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .contact-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+    .contact-btn.github:hover {
+      background: #24292e;
+      color: white;
+    }
+    .contact-btn.linkedin:hover {
+      background: #0A66C2;
+      color: white;
+    }
+    .contact-btn.email:hover {
+      background: #555;
+      color: white;
+    }
+
+    /* === Footer === */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    /* === Responsivita === */
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jan Novák</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">O mně</a></li>
+        <li><a href="#projects">Projekty</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Ahoj, jsem Jan Novák</h2>
+      <p>Vývojář zaměřený na IoT, webové technologie a chytrá zařízení. Tvořím propojený svět hardware a softwaru.</p>
+    </section>
+
+    <section id="about" class="about">
+      <h3>O mně</h3>
+      <p>Jsem technologický nadšenec, který rád spojuje fyzický a digitální svět. Baví mě tvořit aplikace, které mají reálný dopad — od IoT zařízení přes webové platformy až po experimentální projekty. Neustále se učím nové technologie a hledám elegantní řešení složitých problémů.</p>
+    </section>
+
+    <section id="projects">
+      <h3>Projekty</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>IoT Meteostanice</h4>
+          <p>ESP32-based meteostanice s MQTT integrací a OTA aktualizací firmwaru.</p>
+          <div class="tags">
+            <span class="tag hardware">ESP32</span>
+            <span class="tag backend">MQTT</span>
+            <span class="tag backend">OTA</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h4>Dashboard pro chytrý dům</h4>
+          <p>Webové rozhraní pro správu IoT zařízení s live daty a grafy.</p>
+          <div class="tags">
+            <span class="tag web">React</span>
+            <span class="tag backend">WebSocket</span>
+            <span class="tag web">D3.js</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h4>Sensor Logger</h4>
+          <p>Firmware a webové rozhraní pro záznam dat z více senzorů do cloudu.</p>
+          <div class="tags">
+            <span class="tag hardware">Sensor</span>
+            <span class="tag backend">Node.js</span>
+            <span class="tag backend">Cloud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h3>Blog</h3>
+      <div class="blog-posts">
+        <div class="blog-card">
+          <h4>Optimalizace OTA aktualizací na ESP32</h4>
+          <p>Jak efektivně aktualizovat firmware vzdáleně bez výpadku služby.</p>
+        </div>
+        <div class="blog-card">
+          <h4>MQTT vs WebSocket – co zvolit pro IoT?</h4>
+          <p>Porovnání obou technologií v reálných scénářích IoT projektů.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Kontakt</h3>
+      <p>Pokud chceš spolupracovat nebo se jen na něco zeptat, ozvi se.</p>
+      <div class="contact-links">
+        <a href="mailto:jan.novak@example.com" class="contact-btn email">
+          <!-- Email ikona -->
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg>
+          E-mail
+        </a>
+        <a href="https://github.com/" target="_blank" class="contact-btn github">
+          <!-- GitHub ikona -->
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.3c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.9-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05.9 1.56 2.37 1.11 2.95.85.09-.67.36-1.11.65-1.37-2.22-.26-4.56-1.15-4.56-5.1 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.06A9.3 9.3 0 0 1 12 6.8c.85 0 1.7.12 2.5.35 1.9-1.34 2.75-1.06 2.75-1.06.55 1.4.2 2.44.1 2.7.64.72 1.03 1.64 1.03 2.77 0 3.96-2.35 4.84-4.58 5.09.37.33.7.96.7 1.95v2.89c0 .27.18.6.7.49A10.33 10.33 0 0 0 22 12.3C22 6.58 17.52 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="contact-btn linkedin">
+          <!-- LinkedIn ikona -->
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3A2.02 2.02 0 0 0 3 5.02c0 1.1.9 1.98 2.02 1.98A2 2 0 0 0 7 5.02C7 3.9 6.1 3 4.98 3zM3.5 8h3v12h-3zM10 8h3v1.7h.04c.42-.8 1.44-1.64 2.96-1.64 3.17 0 3.75 2.08 3.75 4.8V20h-3v-6.5c0-1.54-.03-3.52-2.15-3.52-2.15 0-2.48 1.67-2.48 3.4V20h-3z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Jan Novák – Poslední aktualizace: říjen 2025
+  </footer>
+
+</body>
+</html>

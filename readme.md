@@ -37,6 +37,11 @@ Stačí otevřít soubor `index.html` v prohlížeči.
 
 ---
 
+## 🚀 Deploy
+Bude tu docker compose. V něm bude nginx jako reverzní proxy, která bude přesměrovávat požadavky na nginx container který běží na základě image který je dockerfilem buildnutý z raw nginxu a našeho react buildu. Dále to bude přesměrovávat na backend constainer, kterých běží v rámci composu. CloudFlared následně bude tunelovat pouze port nginxu takže vše bude schované za reverzní proxy a můžeme tak zde řešit limiting nebo autentikaci.
+
+---
+
 ## 📄 Licence
 Projekt je určen pro studijní a osobní prezentaci.  
 © 2025 Jan Novák

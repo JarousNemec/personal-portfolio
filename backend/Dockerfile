@@ -4,7 +4,7 @@ WORKDIR /app
 RUN npm install
 # Set environment
 ENV NODE_ENV=production
-EXPOSE 10001
+EXPOSE 80
 
 # Start the server
 CMD ["npm", "start"]

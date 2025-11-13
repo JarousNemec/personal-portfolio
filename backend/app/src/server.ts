@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 
 const app = express();
-const PORT = 10001;
+const PORT = 80;
 
 // GET endpoint
 app.get('/hello', (req: Request, res: Response) => {

@@ -15,6 +15,8 @@ jobs:
     env:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+      DOCKER_IMAGE_FRONTEND: personal-portfolio-frontend
+      DOCKER_IMAGE_BACKEND: personal-portfolio-backend
 
     steps:
       # 1️⃣ Checkout repo
@@ -31,19 +33,19 @@ jobs:
       # 3️⃣ Build frontend image
       - name: Build Frontend Docker Image
         run: |
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/frontend:latest ./frontend
+          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_FRONTEND }}:latest ./frontend
 
       # 4️⃣ Build backend image
       - name: Build Backend Docker Image
         run: |
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/backend:latest ./backend
+          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_BACKEND }}:latest ./backend
 
       # 5️⃣ Push frontend image
       - name: Push Frontend Docker Image
         run: |
-          docker push ${{ env.DOCKERHUB_USERNAME }}/frontend:latest
+          docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_FRONTEND }}:latest
 
       # 6️⃣ Push backend image
       - name: Push Backend Docker Image
         run: |
-          docker push ${{ env.DOCKERHUB_USERNAME }}/backend:latest
+          docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_BACKEND }}:latest

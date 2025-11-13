@@ -1,19 +1,21 @@
+version: "3.9"
+
 services:
   frontend:
-    image: jardathedev/personal-portfolio-frontend:latest
+    image: docker.io/jardathedev/personal-portfolio-frontend:latest
     restart: unless-stopped
     pull_policy: always
     networks:
       - portfolio
 
   backend:
-    image: jardathedev/personal-portfolio-backend:latest
+    image: docker.io/jardathedev/personal-portfolio-backend:latest
     restart: unless-stopped
     pull_policy: always
     networks:
       - portfolio
 
-  web:
+  proxy:
     image: nginx:alpine
     container_name: portfolio-nginx
     restart: unless-stopped
@@ -22,8 +24,6 @@ services:
       - backend
     volumes:
       - ./portfolio/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-    ports:
-      - "8080:80"
     networks:
       - tunnel-portfolio
       - portfolio
@@ -32,7 +32,7 @@ services:
     image: cloudflare/cloudflared:latest
     restart: unless-stopped
     depends_on:
-      - web
+      - proxy
     command: tunnel --no-autoupdate run
     environment:
       - TUNNEL_TOKEN=${TUNNEL_PORTFOLIO_TOKEN}

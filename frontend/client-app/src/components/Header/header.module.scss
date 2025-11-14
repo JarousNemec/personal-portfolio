@@ -1,0 +1,22 @@
+.siteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.navWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    background: linear-gradient(180deg, rgba(249, 249, 251), rgba(249, 249, 251));
+    border-bottom: 1px solid rgba(16, 24, 40, 0.04);
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.02);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 20px ;
+}

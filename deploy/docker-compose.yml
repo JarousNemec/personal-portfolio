@@ -17,7 +17,6 @@ services:
 
   proxy:
     image: nginx:alpine
-    container_name: portfolio-nginx
     restart: unless-stopped
     depends_on:
       - frontend

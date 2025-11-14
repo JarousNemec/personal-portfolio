@@ -1,3 +1,4 @@
 /backend/api/node_modules/
 /.idea/watcherTasks.xml
 /backend/app/node_modules/
+/.idea/copilot.data.migration.agent.xml

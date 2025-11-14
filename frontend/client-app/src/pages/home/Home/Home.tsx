@@ -1,4 +1,4 @@
-import Contacts from "../components/Contacts/Contacts.tsx";
+import ContactSection from "../components/ContactSection/ContactSection.tsx";
 import BlogSection from "../components/BlogSection/BlogSection.tsx";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection.tsx";
 import AboutSection from "../components/AboutSection/AboutSection.tsx";
@@ -15,7 +15,7 @@ const Home = () => {
 
             <BlogSection/>
 
-            <Contacts/>
+            <ContactSection/>
         </main>
     </>)
 }

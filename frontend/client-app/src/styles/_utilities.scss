@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center
+}
+
+.col {
+    flex: 1;
+}

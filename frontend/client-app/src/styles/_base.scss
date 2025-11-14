@@ -1,79 +1,3 @@
-/* ===== DESIGN TOKENS ===== */
-:root {
-    --bg: #f9f9fb;
-    --surface: #ffffff;
-    --muted: #59595d;
-    --text: #22252a;
-    --accent: #0078D4;
-    --accent-2: #00a6ff;
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --space-xxs: 4px;
-    --space-xs: 8px;
-    --space-sm: 12px;
-    --space-md: 20px;
-    --space-lg: 36px;
-    --container: 1100px;
-    --transition: 220ms cubic-bezier(.2, .9, .3, 1);
-    --shadow-soft: 0 6px 18px rgba(16, 24, 40, 0.06);
-    --shadow-hover: 0 12px 30px rgba(0, 120, 212, 0.08);
-}
-
-/* ===== RESET & BASE ===== */
-*, *::before, *::after {
-    box-sizing: border-box
-}
-
-html, body {
-    height: 100%
-}
-
-body {
-    margin: 0;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: var(--bg);
-    color: var(--text);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.45;
-    font-size: 16px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block
-}
-
-a {
-    color: inherit;
-    text-decoration: none
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0
-}
-
-/* ===== LAYOUT HELPERS ===== */
-.container {
-    width: 100%;
-    max-width: var(--container);
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.row {
-    display: flex;
-    gap: var(--space-lg);
-    align-items: center
-}
-
-.col {
-    flex: 1;
-}
-
 /* ===== HERO ===== */
 .hero {
     position: relative;
@@ -328,52 +252,6 @@ article.post {
     font-size: 0.95rem
 }
 
-/* === Kontakt === */
-.contact p {
-    text-align: center;
-    color: #555;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-}
-
-.contact-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    background: white;
-    border: 1px solid #ddd;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.contact-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.contact-btn.github:hover {
-    background: #24292e;
-    color: white;
-}
-
-.contact-btn.linkedin:hover {
-    background: #0A66C2;
-    color: white;
-}
-
-.contact-btn.email:hover {
-    background: #555;
-    color: white;
-}
-
 /* CONTACT */
 .contact-card {
     max-width: 720px;
@@ -405,16 +283,6 @@ article.post {
     background: rgba(0, 120, 212, 0.03);
     transform: translateY(-3px)
 }
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-    border-top: 1px solid #eee;
-}
-
 /* RESPONSIVE */
 @media (max-width: 960px) {
     .hero .container {

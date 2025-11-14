@@ -1,5 +1,3 @@
-// import styles from "./Home.module.scss"
-
 import Contacts from "../components/Contacts/Contacts.tsx";
 import BlogSection from "../components/BlogSection/BlogSection.tsx";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection.tsx";

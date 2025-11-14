@@ -1,4 +1,4 @@
-import styles from "./HeaderNavigation.module.scss";
+import styles from "./headerNavigation.module.scss";
 
 const HeaderNavigation = () => {
     return (

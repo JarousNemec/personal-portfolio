@@ -1,0 +1,28 @@
+.hero {
+  position: relative;
+  padding: 72px 0 64px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+
+@media (max-width: 960px) {
+  .heroContainer {
+    grid-template-columns:1fr
+  }
+}
+
+@media (max-width: 520px) {
+    .hero {
+        padding: 48px 0
+    }
+}

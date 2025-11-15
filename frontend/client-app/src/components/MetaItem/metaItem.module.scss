@@ -1,0 +1,14 @@
+.meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.metaKey {
+    color: var(--muted)
+}
+
+.metaValue {
+    font-weight: 600;
+    color: var(--text)
+}

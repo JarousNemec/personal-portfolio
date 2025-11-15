@@ -1,0 +1,15 @@
+.about {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bio {
+    max-width: 720px;
+    color: var(--muted);
+    font-size: 1rem;
+    text-align: center;
+}
+

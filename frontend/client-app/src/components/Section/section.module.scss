@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: var(--space-lg) 0
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 0 0 var(--space-md);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 54px;
+    height: 4px;
+    border-radius: 4px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    opacity: 0.95;
+  }
+}

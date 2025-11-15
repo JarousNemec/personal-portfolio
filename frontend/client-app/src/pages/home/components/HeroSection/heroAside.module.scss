@@ -1,0 +1,13 @@
+@media (max-width: 960px) {
+    .heroAside {
+        order: 2
+    }
+}
+
+.heroAside {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(16, 24, 40, 0.03);
+}

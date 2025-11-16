@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './heroContent.module.scss'
-import {useScrollToSection} from "../../../../hooks/useScrollToId.ts";
+import {useScrollToSection} from "../../../../../../hooks/useScrollToId.ts";
 
 const HeroContent: React.FC = () => {
     const scrollToSection = useScrollToSection();

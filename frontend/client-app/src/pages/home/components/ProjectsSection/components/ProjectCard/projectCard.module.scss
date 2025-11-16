@@ -1,0 +1,66 @@
+.project {
+  background: var(--surface);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 24, 40, 0.03);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover)
+  }
+}
+
+.cardActions {
+  margin-top: 12px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.cardTitle {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.05rem
+}
+
+.cardDescription {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem
+}
+
+
+.tag {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--muted)
+}
+
+.tagHardware {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.tagWeb {
+  background: #E3F2FD;
+  color: #1565C0;
+}
+
+.tagBackend {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.tagOther {
+  background: #F2F2F2;
+  color: #555;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap
+}

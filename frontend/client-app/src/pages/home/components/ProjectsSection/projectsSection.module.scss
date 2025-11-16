@@ -1,0 +1,5 @@
+.projectsGrid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+}

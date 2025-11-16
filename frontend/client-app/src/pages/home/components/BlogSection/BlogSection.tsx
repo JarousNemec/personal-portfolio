@@ -1,24 +1,24 @@
 import React from 'react';
 import Section from '../../../../components/Section/Section';
+import styles from "./blogSection.module.scss"
+import {BlogCard} from "./components/BlogCard/BlogCard.tsx";
 
 const BlogSection: React.FC = () => {
     return (
-        <Section id={"blog"} title={"Blog & poznámky"} containerClassName={"posts-grid"}
+        <Section id={"blog"} title={"Blog & poznámky"} containerClassName={styles.blogsGrid}
                  containerAriaLabel={"Seznam článků z blogu"} containerRole={"list"}>
-            <article className="post" role="listitem" aria-labelledby="b1">
-                <h4 id="b1">Optimalizace MQTT přenosu</h4>
-                <p>Praktické tipy jak snížit latenci a šetřit šířku pásma v IoT sítích.</p>
-            </article>
+            <BlogCard id={"b1"}
+                      title={"Optimalizace MQTT přenosu"}
+                      description={"Praktické tipy jak snížit latenci a šetřit šířku pásma v IoT sítích."}/>
 
-            <article className="post" role="listitem" aria-labelledby="b2">
-                <h4 id="b2">ESP32 vs Raspberry Pi Pico</h4>
-                <p>Krátké srovnání z hlediska výkonu, spotřeby a vhodnosti do nasazení.</p>
-            </article>
+            <BlogCard id={"b2"}
+                      title={"ESP32 vs Raspberry Pi Pico"}
+                      description={"Krátké srovnání z hlediska výkonu, spotřeby a vhodnosti do nasazení."}/>
 
-            <article className="post" role="listitem" aria-labelledby="b3">
-                <h4 id="b3">Bezpečnostní základy pro embedded</h4>
-                <p>Nastavení TLS, bezpečné OTA a minimalizace útokových vektorů u IoT zařízení.</p>
-            </article>
+            <BlogCard id={"b3"}
+                      title={"Bezpečnostní základy pro embedded"}
+                      description={"Nastavení TLS, bezpečné OTA a minimalizace útokových vektorů u IoT zařízení."}/>
+
         </Section>
     );
 };

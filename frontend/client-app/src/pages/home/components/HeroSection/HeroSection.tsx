@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './heroSection.module.scss'
-import HeroContent from "./HeroContent.tsx";
-import HeroAside from "./HeroAside.tsx";
+import HeroContent from "./components/HeroContent/HeroContent.tsx";
+import HeroAside from "./components/HeroAside/HeroAside.tsx";
 import Section from "../../../../components/Section/Section.tsx";
 
 const HeroSection: React.FC = () => {

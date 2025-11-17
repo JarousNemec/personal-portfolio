@@ -1,0 +1,113 @@
+@use '../../../../styles/variables';
+
+.menu {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.navLink {
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--accent);
+        background: rgba(0, 120, 212, 0.06);
+        outline: none;
+    }
+}
+
+.burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; // přesná velikost bez výplně
+
+    /* 3 linky */
+    span {
+        position: absolute;
+        left: 50%;
+        width: 24px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: transform .3s ease, opacity .3s ease;
+        transform: translateX(-50%); // centrování horizontálně
+    }
+
+    /* Linka 1 */
+    span:nth-child(1) {
+        top: 12px;
+    }
+
+    /* Linka 2 */
+    span:nth-child(2) {
+        top: 18.5px; // přesný střed mezi 12 a 25
+    }
+
+    /* Linka 3 */
+    span:nth-child(3) {
+        top: 25px;
+    }
+}
+
+@media (max-width: variables.$breakpoint-md) {
+
+    .burger {
+        display: block;
+        z-index: 200;
+    }
+
+    /* OPEN STATE → cross (X) */
+    .burger.open {
+
+        span:nth-child(1) {
+            transform: translate(-50%, 6.5px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: translate(-50%, -6.5px) rotate(-45deg);
+        }
+    }
+
+    /* === Mobile dropdown === */
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--bg);
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .3s ease, opacity .3s ease;
+    }
+
+    .menuOpen {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

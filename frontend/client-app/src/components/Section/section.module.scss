@@ -1,6 +1,7 @@
 .container {
   width: 100%;
-  max-width: var(--container);
+  max-width: var(--container-maxWidth);
+  min-width: var(--container-minWidth);
   margin: 0 auto;
   padding: 0 20px;
 }

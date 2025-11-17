@@ -1,5 +1,5 @@
-import HeaderLogo from "./HeaderLogo.tsx";
-import HeaderNavigation from "./HeaderNavigation.tsx";
+import HeaderLogo from "./components/HeaderLogo/HeaderLogo.tsx";
+import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation.tsx";
 import styles from "./header.module.scss"
 
 const Header = () => {

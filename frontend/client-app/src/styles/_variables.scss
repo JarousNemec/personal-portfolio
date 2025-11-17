@@ -1,19 +1,37 @@
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px; //breakpoint from mobile -> tablet
+$breakpoint-lg: 1024px; //breakpoint from tablet -> desktop
+$breakpoint-xl: 1280px; //breakpoint standard desktop
+$breakpoint-xxl: 1440px;
+
 :root {
-    --bg: #f9f9fb;
-    --surface: #ffffff;
-    --muted: #59595d;
-    --text: #22252a;
-    --accent: #0078D4;
-    --accent-2: #00a6ff;
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --space-xxs: 4px;
-    --space-xs: 8px;
-    --space-sm: 12px;
-    --space-md: 20px;
-    --space-lg: 36px;
-    --container: 1100px;
-    --transition: 220ms cubic-bezier(.2, .9, .3, 1);
-    --shadow-soft: 0 6px 18px rgba(16, 24, 40, 0.06);
-    --shadow-hover: 0 12px 30px rgba(0, 120, 212, 0.08);
+  --bg: #f9f9fb;
+  --surface: #ffffff;
+  --muted: #59595d;
+  --text: #22252a;
+  --accent: #0078D4;
+  --accent-2: #00a6ff;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 36px;
+
+  --container-maxWidth: 1200px;
+  --container-minWidth: 360px;
+
+
+
+  --page-minWidth: 360px;
+
+  --transition: 220ms cubic-bezier(.2, .9, .3, 1);
+
+  --shadow-soft: 0 6px 18px rgba(16, 24, 40, 0.06);
+  --shadow-hover: 0 12px 30px rgba(0, 120, 212, 0.08);
+
 }
+

@@ -1,0 +1,26 @@
+@use '../../../../styles/variables';
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 6px 16px rgba(0, 120, 212, 0.12);
+}
+
+.brandLabel {
+  display: block;
+}

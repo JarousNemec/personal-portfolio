@@ -6,7 +6,7 @@ const HeaderLogo = () => {
             <div className={styles.logo} aria-hidden="true">JN</div>
             <div className={styles.brandLabel}>
                 <div style={{fontSize: '14px'}}>Jaroslav Němec</div>
-                <div style={{fontSize: '12px'}}>Programátor, elektrikář a kutil</div>
+                <div style={{fontSize: '12px'}}>Full-stack vývojář</div>
             </div>
         </div>)
 }

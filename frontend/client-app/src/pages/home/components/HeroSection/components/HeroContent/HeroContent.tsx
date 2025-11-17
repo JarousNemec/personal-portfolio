@@ -6,15 +6,16 @@ const HeroContent: React.FC = () => {
     const scrollToSection = useScrollToSection();
     return (
         <div>
-            <h1 className={styles.heroH1}>Vytvářím chytrá řešení — IoT, embedded &amp; web</h1>
+            <h1 className={styles.heroH1}>Nebojím se neznámého — kompletní vývoj od nápadu po hotový produkt</h1>
             <p className={styles.heroLead}>
-                Jsem vývojář, který propojuje hardware a software. Dělám malé i větší IoT projekty, dashboardy a
-                nástroje pro zpracování dat — čistě, efektivně a s důrazem na použitelnost.
+                Jsem vývojář, který rád objevuje nové cesty. Když se objeví složitější problém, beru ho jako příležitost
+                něco se naučit a najít řešení, které bude funkční a užitečné. Záleží mi na tom, aby věci dávaly smysl a
+                lidem dobře sloužily.
             </p>
 
             <div className={styles.fastForwardBtns} role="group" aria-label="Hlavní akce">
-                <a className="btn" onClick={()=> scrollToSection("projects")}>Moje projekty</a>
-                <a className="btn ghost" onClick={()=> scrollToSection("contact")}>Kontakt</a>
+                <a className="btn" onClick={() => scrollToSection("projects")}>Moje projekty</a>
+                <a className="btn ghost" onClick={() => scrollToSection("contact")}>Kontakt</a>
             </div>
         </div>
     );

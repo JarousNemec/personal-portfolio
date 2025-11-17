@@ -7,7 +7,7 @@ const UserCard: React.FC = () => {
                 <div className={styles.avatar} aria-hidden="true">JN</div>
                 <div>
                     <div style={{fontWeight: 700, color: 'var(--text)'}}>Jaroslav Němec</div>
-                    <div style={{color: 'var(--muted)', fontSize: '13px'}}>IoT &amp; Embedded Systems</div>
+                    <div style={{color: 'var(--muted)', fontSize: '13px'}}>Full-stack vývojář</div>
                 </div>
             </div>
     );

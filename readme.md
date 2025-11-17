@@ -1,25 +1,63 @@
-# 🧠 Portfolio – Jan Novák
+# 🌐 Osobní Portfolio – Jaroslav Němec
 
-Osobní portfolio prezentující mou práci v oblasti **IoT, embedded systémů a webových technologií**.  
-Web je navržen s důrazem na **minimalistický design**, **čitelnost** a **moderní technologický vzhled**.
+Moderní osobní portfolio vytvořené pomocí **Reactu**, **TypeScriptu** a **modulárního SCSS**, navržené jako přehledná prezentace projektů, blogů a profesního profilu.  
+Portfolio slouží jako centrální místo pro ukázku mých projektů, IoT zařízení, webových aplikací a technických poznámek.
+
+## 🚀 Funkce
+
+### ⭐ Hero sekce
+- Úvodní claim
+- Stručné představení
+- CTA tlačítka (Projekty / Kontakt)
+- Postranní panel s informacemi (lokalita, hodnoty, aktualizace, avatar)
+
+### 👤 Sekce “O mně”
+- Krátké osobní představení
+- Moje cesta od C# přes IoT až po webové technologie
+- Zaměření na full-stack vývoj
+
+### 🛠 Projekty
+Ukázka vybraných projektů:
+- **IoT Meteostanice**  
+  ESP32, MQTT, OTA, cloudový dashboard  
+- **Chytrý zásuvkový modul**  
+  React dashboard, D3.js vizualizace, WebSocket komunikace  
+- **Sensor Network Visualizer**  
+  Realtime vizualizace pomocí Node.js a WebSocketů
+
+Každý projekt má krátký popis, seznam použitých technologií a možnost:
+- stáhnout build / firmware
+- otevřít GitHub repozitář
+
+### 📝 Blog & poznámky
+Krátké technické články a poznámky k tématům:
+- optimalizace MQTT
+- srovnání ESP32 vs Raspberry Pi Pico
+- základy embedded bezpečnosti
+
+### 📬 Kontakt
+Možnost kontaktovat mě přes:
+- e-mail  
+- GitHub  
+- LinkedIn  
+
+Karta je doplněna krátkou pozvánkou ke spolupráci.
 
 ---
 
-## 🌐 Obsah a struktura
-Web je rozdělen do několika hlavních sekcí:
-- **Hero sekce** – krátké představení a CTA (moje projekty / kontakt)
-- **O mně** – shrnutí zkušeností a zaměření
-- **Projekty** – ukázky hlavních IoT a softwarových projektů
-- **Blog** – krátké články k jednotlivým technologiím a projektům
-- **Kontakt** – odkazy na GitHub, LinkedIn a e-mail
+## 🧰 Použité technologie
 
----
+### Frontend
+- **React + TypeScript**
+- **Vite**
+- **SCSS modules**
+- **CSS variables**
+- **Responsive design**
 
-## 🛠️ Technologie
-- **HTML5** – sémantická struktura (header, main, section, footer)
-- **CSS3** – vlastní stylování, systém proměnných, responzivní layout
-- **SVG** – dekorativní pozadí a ikony sociálních sítí
-- Bez použití frameworků (Bootstrap, React, aj.)
+### Architektura
+- Přehledná komponentová struktura
+- Samostatné sekce (Hero, About, Projects, Blog, Contact)
+- Reusable komponenty (Section, UserCard, MetaList, Header, Footer)
 
 ---
 
@@ -34,11 +72,6 @@ Web je rozdělen do několika hlavních sekcí:
 
 ## 🚀 Spuštění
 Stačí otevřít soubor `index.html` v prohlížeči.
-
----
-
-## 🚀 Deploy
-Bude tu docker compose. V něm bude nginx jako reverzní proxy, která bude přesměrovávat požadavky na nginx container který běží na základě image který je dockerfilem buildnutý z raw nginxu a našeho react buildu. Dále to bude přesměrovávat na backend constainer, kterých běží v rámci composu. CloudFlared následně bude tunelovat pouze port nginxu takže vše bude schované za reverzní proxy a můžeme tak zde řešit limiting nebo autentikaci.
 
 ---
 

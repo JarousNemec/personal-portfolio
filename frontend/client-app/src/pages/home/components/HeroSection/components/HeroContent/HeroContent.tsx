@@ -8,9 +8,9 @@ const HeroContent: React.FC = () => {
         <div>
             <h1 className={styles.heroH1}>Nebojím se neznámého — kompletní vývoj od nápadu po hotový produkt</h1>
             <p className={styles.heroLead}>
-                Jsem vývojář, který rád objevuje nové cesty. Když se objeví složitější problém, beru ho jako příležitost
+                Jsem vývojář, který rád vytváří zajímavé a vyjímečné projekty. Když se objeví složitější problém, beru ho jako příležitost
                 něco se naučit a najít řešení, které bude funkční a užitečné. Záleží mi na tom, aby věci dávaly smysl a
-                lidem dobře sloužily.
+                dobře sloužily.
             </p>
 
             <div className={styles.fastForwardBtns} role="group" aria-label="Hlavní akce">

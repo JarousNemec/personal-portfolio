@@ -1,7 +1,10 @@
-import {useCallback} from "react";
+import {useCallback, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
-export const useScrollToSection = (offset: number = 54) => {
-    return useCallback((id: string) => {
+export const useScrollToId = (offset: number = 54) => {
+    const navigate = useNavigate();
+
+    const scrollToEl = useCallback((id: string) => {
         const el = document.getElementById(id);
         if (!el) return;
 
@@ -19,22 +22,17 @@ export const useScrollToSection = (offset: number = 54) => {
             buffer.style.height = `${bufferHeight > 0 ? bufferHeight : 0}px`;
         }
 
-        // Scroll after layout
         requestAnimationFrame(() => {
             const top = el.getBoundingClientRect().top + window.scrollY - offset;
-
-            window.scrollTo({
-                top,
-                behavior: "smooth",
-            });
+            window.scrollTo({top, behavior: "smooth"});
 
             const checkIfReached = () => {
                 const rect = el.getBoundingClientRect();
-                return Math.abs(rect.top - offset) < 3; // tolerance pár px
+                return Math.abs(rect.top - offset) < 3;
             };
 
-            const waitUntilScrolled = () => {
-                return new Promise<void>((resolve) => {
+            const waitUntilScrolled = () =>
+                new Promise<void>((resolve) => {
                     const handler = () => {
                         if (checkIfReached()) {
                             window.removeEventListener("scroll", handler);
@@ -42,38 +40,50 @@ export const useScrollToSection = (offset: number = 54) => {
                         }
                     };
                     window.addEventListener("scroll", handler);
-                    // kdyby to už bylo na místě ve stejný frame
                     handler();
                 });
-            };
 
             waitUntilScrolled().then(() => {
                 if (!buffer) return;
 
                 const observer = new IntersectionObserver(
                     (entries) => {
-                        const entry = entries[0];
-
-                        // Pokud buffer NENÍ vidět → odstraníme ho a zrušíme observer
-                        if (!entry.isIntersecting) {
+                        if (!entries[0].isIntersecting) {
                             buffer?.remove();
                             observer.disconnect();
                         }
                     },
-                    {
-                        root: null,
-                        threshold: 0, // stačí i pixel viditelnosti
-                    }
+                    {root: null, threshold: 0}
                 );
 
                 observer.observe(buffer);
             });
         });
+
     }, [offset]);
+
+    const tryScrollToElementIdInStorage = useCallback(() => {
+        const id = sessionStorage.getItem("scroll-target");
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (el) {
+            sessionStorage.removeItem("scroll-target");
+            scrollToEl(id);
+        } else {
+            requestAnimationFrame(tryScrollToElementIdInStorage);
+        }
+    },[scrollToEl]);
+
+
+    const navigateAndScroll = useCallback((targetPage: string, id: string) => {
+        sessionStorage.setItem("scroll-target", id);
+        navigate(targetPage);
+        tryScrollToElementIdInStorage();
+    }, [navigate, tryScrollToElementIdInStorage]);
+
+    useEffect(() => {
+        tryScrollToElementIdInStorage();
+    }, [tryScrollToElementIdInStorage]);
+
+    return navigateAndScroll;
 };
-
-
-
-
-
-

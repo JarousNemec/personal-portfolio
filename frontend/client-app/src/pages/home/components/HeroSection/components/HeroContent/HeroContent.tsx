@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './heroContent.module.scss'
-import {useScrollToSection} from "../../../../../../hooks/useScrollToId.ts";
+import {useScrollToId} from "../../../../../../hooks/useScrollToId.ts";
 
 const HeroContent: React.FC = () => {
-    const scrollToSection = useScrollToSection();
+    const scrollToSection = useScrollToId();
     return (
         <div>
             <h1 className={styles.heroH1}>Nebojím se neznámého — kompletní vývoj od nápadu po hotový produkt</h1>
@@ -14,8 +14,8 @@ const HeroContent: React.FC = () => {
             </p>
 
             <div className={styles.fastForwardBtns} role="group" aria-label="Hlavní akce">
-                <a className="btn" onClick={() => scrollToSection("projects")}>Moje projekty</a>
-                <a className="btn ghost" onClick={() => scrollToSection("contact")}>Kontakt</a>
+                <a className="btn" onClick={() => scrollToSection("/","projects")}>Moje projekty</a>
+                <a className="btn ghost" onClick={() => scrollToSection("/","contact")}>Kontakt</a>
             </div>
         </div>
     );

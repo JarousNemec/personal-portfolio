@@ -1,13 +1,13 @@
 import {useState} from "react";
 import styles from "./headerNavigation.module.scss";
-import {useScrollToSection} from "../../../../hooks/useScrollToId.ts";
+import {useScrollToId} from "../../../../hooks/useScrollToId.ts";
 
 const HeaderNavigation = () => {
     const [open, setOpen] = useState(false);
-    const scrollToSection = useScrollToSection();
+    const scrollToSection = useScrollToId();
 
     const handleClick = (section: string) => {
-        scrollToSection(section);
+        scrollToSection("/",section);
         setOpen(false); // zavřít menu po kliknutí
     }
 

@@ -1,3 +1,3 @@
 export interface TechCategory {
-     name: string;
+    name: string;
 }

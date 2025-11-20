@@ -7,6 +7,8 @@ export interface ProjectModel {
     name: string;
     title: string;
     description: string;
+    downloadUrl: string;
+    gitRepoUrl: string;
     images: ArticleImage[];
     sections: ArticleSection[];
     tags: CategoryTag[];

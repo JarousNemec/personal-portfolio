@@ -1,5 +1,10 @@
 FROM node:22-alpine
-COPY . .
+# Copy client app
+COPY ./backend/app /app
+
+# Copy shared models so TypeScript can find them
+COPY ./shared /shared
+
 WORKDIR /app
 RUN npm install
 # Set environment

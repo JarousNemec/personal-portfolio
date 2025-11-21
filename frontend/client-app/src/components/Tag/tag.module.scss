@@ -1,0 +1,27 @@
+.tag {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--muted)
+}
+
+.hardware {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.web {
+  background: #E3F2FD;
+  color: #1565C0;
+}
+
+.backend {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.other {
+  background: #F2F2F2;
+  color: #555;
+}

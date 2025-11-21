@@ -33,12 +33,12 @@ jobs:
       # 3️⃣ Build frontend image
       - name: Build Frontend Docker Image
         run: |
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_FRONTEND }}:latest ./frontend
+          docker build -f frontend/Dockerfile -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_FRONTEND }}:latest .
 
       # 4️⃣ Build backend image
       - name: Build Backend Docker Image
         run: |
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_BACKEND }}:latest ./backend
+          docker build -f backend/Dockerfile -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKER_IMAGE_BACKEND }}:latest .
 
       # 5️⃣ Push frontend image
       - name: Push Frontend Docker Image

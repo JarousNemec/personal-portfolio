@@ -2,20 +2,23 @@ import {useEffect, useState} from "react";
 import type {ProjectModel} from "../../../../shared/models/projectModel.ts";
 import {projectService} from "../services/projectService.ts";
 
-export function useProjectDetails(id: string) {
-    const [blog, setBlog] = useState<ProjectModel | null>(null);
-    const [loading, setLoading] = useState(true);
+export function useProjectDetails(id: string | undefined) {
+    const [project, setProject] = useState<ProjectModel | null>(null);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
-        if (!id) return;
+        if (!id) {
+            setError(new Error("No project id"));
+            return;
+        }
 
         let isMounted = true;
         setLoading(true);
 
         projectService.getProjectDetails(id)
             .then((data) => {
-                if (isMounted) setBlog(data);
+                if (isMounted) setProject(data);
             })
             .catch((err) => {
                 if (isMounted) setError(err);
@@ -29,5 +32,5 @@ export function useProjectDetails(id: string) {
         };
     }, [id]);
 
-    return {blog, loading, error};
+    return {project, loading, error};
 }

@@ -1,5 +1,5 @@
-import {ArticleImage} from "./articleImage";
-import {ArticleSection} from "./articleSection";
+import type {ArticleImage} from "./articleImage";
+import type {ArticleSection} from "./articleSection";
 
 export interface BlogModel {
     id: string;

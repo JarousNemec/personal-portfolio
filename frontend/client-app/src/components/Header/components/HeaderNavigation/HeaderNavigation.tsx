@@ -28,7 +28,7 @@ const HeaderNavigation = () => {
             <ul className={`${styles.menu} ${open ? styles.menuOpen : ""}`}>
                 <li><a className={styles.navLink} onClick={()=> handleClick("about")}>O mně</a></li>
                 <li><a className={styles.navLink} onClick={()=> handleClick("projects")}>Projekty</a></li>
-                <li><a className={styles.navLink} onClick={()=> handleClick("blog")}>Blog</a></li>
+                <li><a className={styles.navLink} onClick={()=> handleClick("blog")}>Blogy</a></li>
                 <li><a className={styles.navLink} onClick={()=> handleClick("contact")}>Kontakt</a></li>
             </ul>
         </nav>

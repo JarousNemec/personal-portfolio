@@ -48,7 +48,7 @@ export const blogDetailsMock = {
     "description": "Prehľad najvýznamnejších technológií, ktoré formujú moderný svet v roku 2025.",
     "sections": [
         {
-            "id": 1,
+            "id": "1",
             "title": "Umelá inteligencia v každodennom živote",
             "paragraphs": [
                 "Umelá inteligencia sa v roku 2025 stala bežnou súčasťou domácností aj pracovísk. Inteligentní asistenti dokážu predvídať potreby používateľov a automatizovať množstvo rutinných úloh.",
@@ -56,7 +56,7 @@ export const blogDetailsMock = {
             ]
         },
         {
-            "id": 2,
+            "id": "2",
             "title": "Rozmach rozšírenej reality",
             "paragraphs": [
                 "Rozšírená realita (AR) už nie je len zábavná technológia. V roku 2025 sa masívne používa v školstve, zdravotníctve a výrobe.",
@@ -64,7 +64,7 @@ export const blogDetailsMock = {
             ]
         },
         {
-            "id": 3,
+            "id": "3",
             "title": "Udržateľné technológie",
             "paragraphs": [
                 "Zelené technológie sú jedným z hlavných pilierov moderného vývoja. Nové materiály redukujú environmentálnu stopu a zlepšujú energetickú efektivitu zariadení.",
@@ -74,15 +74,15 @@ export const blogDetailsMock = {
     ],
     "images": [
         {
-            "path": "https://picsum.photos/seed/ai/800/500",
+            "url": "https://picsum.photos/seed/ai/800/500",
             "description": "Moderní AI asistent v domácnosti."
         },
         {
-            "path": "https://picsum.photos/seed/ar/800/500",
+            "url": "https://picsum.photos/seed/ar/800/500",
             "description": "Ukázka používání AR brýlí při práci."
         },
         {
-            "path": "https://picsum.photos/seed/solar/800/500",
+            "url": "https://picsum.photos/seed/solar/800/500",
             "description": "Moderní solární technologie."
         }
     ]

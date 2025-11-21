@@ -1,5 +1,5 @@
 export interface ArticleSection {
-    id: number;
+    id: string;
     title: string;
     paragraphs: string[];
 }

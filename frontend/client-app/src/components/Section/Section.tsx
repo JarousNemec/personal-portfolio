@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./section.module.scss"
 
-interface TitledSectionProps {
+interface SectionProps {
     id: string;
     title?: string;
     sectionClassName?: string;
@@ -12,7 +12,7 @@ interface TitledSectionProps {
     containerRole?: string;
 }
 
-const Section: React.FC<TitledSectionProps> = ({
+const Section: React.FC<SectionProps> = ({
                                                    id,
                                                    title,
                                                    sectionClassName = "",

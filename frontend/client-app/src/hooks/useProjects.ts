@@ -3,7 +3,7 @@ import type {ProjectModel} from "../../../../shared/models/projectModel.ts";
 import {projectService} from "../services/projectService.ts";
 
 export function useProjects() {
-    const [blogs, setBlogs] = useState<ProjectModel[]>([]);
+    const [projects, setProjects] = useState<ProjectModel[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<Error | null>(null);
 
@@ -12,7 +12,7 @@ export function useProjects() {
 
         projectService.getProjects()
             .then((data) => {
-                if (isMounted) setBlogs(data);
+                if (isMounted) setProjects(data);
             })
             .catch((err) => {
                 if (isMounted) setError(err);
@@ -26,5 +26,5 @@ export function useProjects() {
         };
     }, []);
 
-    return {blogs, loading, error};
+    return {projects, loading, error};
 }

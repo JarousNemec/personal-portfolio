@@ -2,13 +2,16 @@ import {useEffect, useState} from "react";
 import {blogService} from "../services/blogService";
 import type {BlogModel} from "../../../../shared/models/blogModel.ts";
 
-export function useBlogDetails(id: string) {
+export function useBlogDetails(id: string | undefined) {
     const [blog, setBlog] = useState<BlogModel | null>(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
-        if (!id) return;
+        if (!id) {
+            setError(new Error("No blog id"));
+            return;
+        }
 
         let isMounted = true;
         setLoading(true);

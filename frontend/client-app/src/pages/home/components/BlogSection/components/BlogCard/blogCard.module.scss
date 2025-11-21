@@ -1,17 +1,24 @@
 .blogCard {
-    background: var(--surface);
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(16, 24, 40, 0.03);
+  background: var(--surface);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 24, 40, 0.03);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    cursor: pointer;
+  }
 }
 
 .blogTitle {
-    margin: 0 0 8px;
-    color: var(--text)
+  margin: 0 0 8px;
+  color: var(--text)
 }
 
 .blogDescription {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.95rem
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem
 }

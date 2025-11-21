@@ -1,19 +1,17 @@
 import React from "react";
 import styles from "./projectCard.module.scss"
-
-type Tag = {
-    label: string;
-    type: "tagHardware" | "tagBackend" | "tagWeb" | "tagOther" | string;
-};
+import type {TagModel} from "../../../../../../../../../shared/models/tagModel.ts";
+import {Tag} from "../../../../../../components/Tag/Tag.tsx";
+import {useNavigate} from "react-router-dom";
 
 interface ProjectCardProps {
-    id: string;                 // např. "p1"
+    id: string;
     title: string;
     description: string;
-    tags: Tag[];
-    downloadLabel?: string;     // např. "Stáhnout build"
-    downloadUrl?: string;       // URL ke stažení
-    repoUrl?: string;           // GitHub URL
+    tags: TagModel[];
+    downloadLabel?: string;
+    downloadUrl?: string;
+    repoUrl?: string;
     repoLabel?: string;
 }
 
@@ -27,32 +25,34 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                                             repoLabel = "Repo (GitHub)",
                                                             repoUrl,
                                                         }) => {
+    const navigate = useNavigate();
+    const onClick = () => navigate("/project/" + id);
+
     const titleId = "title-" + id;
     return (
         <article id={id} className={styles.project} role="listitem" aria-labelledby={titleId}>
-            <h3 id={titleId} className={styles.cardTitle}>{title}</h3>
+            <span style={{cursor: "pointer"}} onClick={onClick}>
+                <h3 id={titleId} className={styles.cardTitle}>{title}</h3>
 
-            <p className={styles.cardDescription}>{description}</p>
+                <p className={styles.cardDescription}>{description}</p>
 
-            <div className={styles.tags} aria-hidden="true">
-                {tags.map((tag, i) => (
-                    <span key={i} className={`${styles.tag} ${styles[tag.type]}`}>
-            {tag.label}
-          </span>
-                ))}
-            </div>
+                <div className={styles.tags} aria-hidden="true">
+                    {tags.map((tag, i) => (
+                        <Tag key={id + "-tag-" + i} keyId={id + "-tagSpan-" + i} model={tag}/>
+                    ))}
+                </div>
+            </span>
 
             <p className={styles.cardActions}>
-                {downloadUrl &&
-                    <><a href={downloadUrl} download>
-                        {downloadLabel}
-                    </a>{" "}</>}
-
-                {repoUrl &&
-                    <>•{" "}
-                        <a href={repoUrl}>
-                            {repoLabel}
-                        </a></>}
+                {downloadUrl && <><a href={downloadUrl} download>
+                    {downloadLabel}
+                </a></>}
+                {(downloadUrl && repoUrl) && <>
+                    {" "}•{" "}
+                </>}
+                {repoUrl && <><a href={repoUrl}>
+                    {repoLabel}
+                </a></>}
             </p>
         </article>
     );

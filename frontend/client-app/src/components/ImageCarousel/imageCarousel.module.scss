@@ -1,0 +1,41 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  text-align: center;
+}
+
+.imageWrapper img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.navButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  line-height: 1;
+  padding: 0 0.5rem;
+  user-select: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

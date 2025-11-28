@@ -11,7 +11,7 @@ export const projectService = {
             return projectListMock;
         }
 
-        const res = await fetch("/api/projects");
+        const res = await fetch("/granery/api/projects");
         if (!res.ok) {
             throw new Error("Projects list fetch failed.");
         }
@@ -23,7 +23,7 @@ export const projectService = {
             return projectDetailMock;
         }
 
-        const res = await fetch(`/api/project/${id}`);
+        const res = await fetch(`/granery/api/project/${id}`);
         if (!res.ok) {
             throw new Error("Project detail fetch failed");
         }

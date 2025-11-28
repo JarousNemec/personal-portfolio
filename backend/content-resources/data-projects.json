@@ -1,0 +1,87 @@
+[
+    {
+        "id": "project-001",
+        "name": "smart-home-dashboard",
+        "title": "Smart Home Dashboard",
+        "description": "Webová aplikace pro správu a automatizaci chytré domácnosti.",
+        "downloadUrl": "https://github.com/JarousNemec/yt-music-downloader/archive/refs/heads/master.zip",
+        "gitRepoUrl": "https://github.com/JarousNemec/yt-music-downloader",
+        "downloadLabel": "Stáhnout zip projektu",
+        "gitRepoLabel": "Repo projektu",
+        "images": [],
+        "sections": [],
+        "tags": [
+            {"label": "React", "type": "web"},
+            {"label": "TypeScript", "type": "web"},
+            {"label": "IoT", "type": "hardware"}
+        ]
+    },
+    {
+        "id": "project-002",
+        "name": "energy-monitoring-system",
+        "title": "Energy Monitoring System",
+        "description": "Platforma pro sledování energetické spotřeby v reálném čase.",
+        "downloadUrl": "https://github.com/JarousNemec/yt-music-downloader/archive/refs/heads/master.zip",
+        "gitRepoUrl": "https://github.com/JarousNemec/yt-music-downloader",
+        "downloadLabel": "Stáhnout zip projektu",
+        "gitRepoLabel": "Repo projektu",
+        "images": [],
+        "sections": [],
+        "tags": [
+            {"label": "Node.js", "type": "web"},
+            {"label": "MongoDB", "type": "backend"},
+            {"label": "Data Visualization", "type": "other"}
+        ]
+    },
+    {
+        "id": "project-003",
+        "name": "fleet-management-app",
+        "title": "Fleet Management App",
+        "description": "Mobilní a webové řešení pro správu firemních vozových parků.",
+        "downloadUrl": "https://github.com/JarousNemec/yt-music-downloader/archive/refs/heads/master.zip",
+        "gitRepoUrl": "",
+        "downloadLabel": "Stáhnout zip projektu",
+        "gitRepoLabel": "Repo projektu",
+        "images": [],
+        "sections": [],
+        "tags": [
+            {"label": "React Native", "type": "web"},
+            {"label": "Express", "type": "web"},
+            {"label": "GPS Tracking", "type": "hardware"}
+        ]
+    },
+    {
+        "id": "project-004",
+        "name": "ecommerce-platform",
+        "title": "E-commerce Platform",
+        "description": "Modulární e-shop systém připravený pro velké katalogy a více prodejců.",
+        "downloadUrl": "",
+        "gitRepoUrl": "https://github.com/JarousNemec/yt-music-downloader",
+        "downloadLabel": "Stáhnout zip projektu",
+        "gitRepoLabel": "Repo projektu",
+        "images": [],
+        "sections": [],
+        "tags": [
+            {"label": "Next.js", "type": "web"},
+            {"label": "Stripe", "type": "backend"},
+            {"label": "PostgreSQL", "type": "backend"}
+        ]
+    },
+    {
+        "id": "project-005",
+        "name": "ai-document-analyzer",
+        "title": "AI Document Analyzer",
+        "description": "Aplikace využívající umělou inteligenci pro extrakci dat z dokumentů.",
+        "downloadUrl": "",
+        "gitRepoUrl": "",
+        "downloadLabel": "Stáhnout zip projektu",
+        "gitRepoLabel": "Repo projektu",
+        "images": [],
+        "sections": [],
+        "tags": [
+            {"label": "Python", "type": "backend"},
+            {"label": "Machine Learning", "type": "backend"},
+            {"label": "OCR", "type": "backend"}
+        ]
+    }
+]

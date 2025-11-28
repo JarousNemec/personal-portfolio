@@ -11,7 +11,7 @@ export const blogService = {
             return blogListMock;
         }
 
-        const res = await fetch("/api/blogs");
+        const res = await fetch("/granery/api/blogs");
         if (!res.ok) {
             throw new Error("Blogs list fetch failed.");
         }
@@ -23,7 +23,7 @@ export const blogService = {
             return blogDetailsMock;
         }
 
-        const res = await fetch(`/api/blog/${id}`);
+        const res = await fetch(`/granery/api/blog/${id}`);
         if (!res.ok) {
             throw new Error("Blog detail fetch failed");
         }

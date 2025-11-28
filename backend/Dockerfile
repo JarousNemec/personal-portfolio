@@ -7,6 +7,10 @@ COPY ./shared /shared
 
 WORKDIR /app
 RUN npm install
+
+# datový adresář nebude kopírován do image!
+RUN mkdir -p /app/data
+
 # Set environment
 ENV NODE_ENV=production
 EXPOSE 80

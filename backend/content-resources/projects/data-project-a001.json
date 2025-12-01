@@ -1,0 +1,67 @@
+{
+  "id": "a001",
+  "name": "coopmaster",
+  "title": "Coopmaster",
+  "description": "Systém pro péči a automatizaci kurníku",
+  "downloadUrl": "http://prihlaska-test.soc.cz/archiv47/getWork/hash/8a7fe3e6-f390-11ef-a16c-005056bd6e49",
+  "gitRepoUrl": "https://github.com/JarousNemec/coopmaster/tree/main",
+  "downloadLabel": "Stáhnout pdf práce",
+  "gitRepoLabel": "Hlavní repo projektu",
+  "images": [
+    {
+      "id": "i001",
+      "description": "Analýza projektu"
+    },
+    {
+      "id": "i002",
+      "description": "Orientační diagram"
+    },
+    {
+      "id": "i003",
+      "description": "Dashboard systému v HA"
+    }
+  ],
+  "sections": [
+    {
+      "id": "1",
+      "title": "Úvod",
+      "paragraphs": [
+        "Coopmaster je pokročilý asistenční systém pro automatizaci a zefektivnění chovu hospodářských zvířat, testovaný na chovu kura domácího. Využívá moderních technologií, včetně zpracování obrazu pomocí neuronových sítí, mikroservisní architektury a open source softwaru Home Assistant. Díky nim zajišťuje vyšší úroveň bezpečnosti a minimalizuje nutnost fyzické přítomnosti chovatele. Propojení hardwaru a softwaru tvoří komplexní řešení od vývoje funkčních dvířek a digitálních vah až po intuitivní mobilní i webovou aplikaci s podporou vzdáleného přístupu. Systém v reálném čase monitoruje stav a aktivitu slepic, kontroluje hnízda a odhaluje případné vetřelce ve výběhu. Díky neustálému monitorování hmotnosti hnízd systém poskytuje chovateli aktuální přehled o snůšce vajec v kurníku. Součástí řešení je také rozsáhlý monitoring a tvorba statistik, které uživatelům poskytují přehled o dlouhodobých trendech, produkci vajec či stavu hejna. Projekt je nasazen a používán v reálném provozu. Přináší chovatelům vyšší komfort a zlepšuje blahobyt zvířat. Přestože je v některých oblastech prostor pro další optimalizace a zlepšení, představuje tento projekt významný krok vpřed ve vývoji moderních řídících a automatizačních systémů pro chov hospodářských zvířat."
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Stručný popis fungování",
+      "paragraphs": [
+        "Jako teoretický model pro organizaci funkcionalit, je zvolena mikroservisní architektura. Programovacím jazykem pro tvorbu služeb je zvolen programovací jazyk Python. Pro realizaci, konfiguraci a síťování mikroservisní architektury je použit Docker Engine společně s rozšířením Docker Compose. Na základě předchozích rozhodnutí je systém rozdělen do jednotlivých mikroslužeb tak, aby vznikla robustní a rozšiřitelná mikroservisní architektura a byly splněny všechny uživatelské požadavky, které jsme si určili. Systém obsahuje 8 služeb. Tyto služby společně s hardwarovými prvky tvoří systém Coopmaster.",
+        "Pro podrobnější popis jednotlivých služeb prosím navštivte repozitář projektu, v jehož readme se vše dočtete a případní odvážlivci si mohou prostudovat i soutěžní práci v pdf."
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Technologie",
+      "paragraphs": [
+        "Python 3.10, C++",
+        "Ultralytics YOLO11",
+        "Docker, Docker Compose",
+        "GitHub workflow",
+        "Cloudflare Tunnel",
+        "Raspberry Pi 5, Intel NUC 11 Enthusiastic"
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "label": "AI",
+      "type": "backend"
+    },
+    {
+      "label": "Latex",
+      "type": "other"
+    },
+    {
+      "label": "IoT",
+      "type": "hardware"
+    }
+  ]
+}

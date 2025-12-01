@@ -1,4 +1,4 @@
 export interface ArticleImage {
-    url: string;
+    id: string;
     description: string;
 }

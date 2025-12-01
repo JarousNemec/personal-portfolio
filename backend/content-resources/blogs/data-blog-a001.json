@@ -1,0 +1,49 @@
+{
+  "id": "a001",
+  "name": "zus-holice-zaverecna-prace",
+  "title": "Model větrného mlýnu",
+  "description": "Článek o tom, jak vznikala moje závěrečná práce na ZUŠ Holice",
+  "sections": [
+    {
+      "id": "1",
+      "title": "Úvod",
+      "paragraphs": [
+        "Když jsem ukončoval své vedlejší studium na ZUŠ Karla Malicha v Holicích bylo mi 15 let. Jako téma závěrečné práce jsem si vybral model větrného mlýnu.",
+        "Při tvorbě tohoto díla jsem se inspiroval (tedy alespoň na začátku) souborem dřevěných stavebnic Walachia, která obsahuje mnoho modelů (různé domečky, kostely, radnice a mnoho dalších), mimo jiné také větrný mlýn. Tento mlýn jsem si vybral jako hlavní předlohu, protože jsem již dříve postavil pár domečků a celý koncept na mě kladně zapůsobil. Také proto, jsem chtěl zprvu udělat přesnou kopii této stavebnice, jen s tím rozdílem, že bych si materiál naměřil a opatřil sám.",
+        "Ve finále z toho ale sešlo. Po menší konzultaci sám se sebou jsem usoudil, že plán kompletně předělám a nakonec z celého předchozího návrhu zbylo jen to, že to bude větrný mlýn."
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Návrh a výroba modelu",
+      "paragraphs": [
+        "Přiklonil jsem se více realitě, a tak jsem z neúhledné, nenabarvené, dřevěné kostky s vrtulí, vytvořil úhledný kužel 15 cm vysoký, dole 15 cm široký a nahoře 10 cm široký, jenž je pokryt šindeli z mahagonové dýhy. Tento kužel jsem vytvořil způsobem, že jsem vyřízl dvě kola z překližky o již zmíněných rozměrech. Tato kola jsem pak propojil mezi sebou špejlemi a vytvořil tak hlavní kostru. Zkoušel jsem poté několik variant podkladů pro nalepení šindelů. Látka se ukázala jako nepoužitelná, avšak o něco lépe dopadl kašírovaný papír, ale nakonec to vyhrála přece jen perlinka, kvůli tomu že byla nejpevnější a zároveň šla dobře tvarovat. Pak jsem jen z dýhy nastříhal šindele o rozměrech zhruba 1x2cm a lepil jsem je kolem dokola po celém kuželu. Tato hlavní část obsahuje také dveře, které jsem vyrobil z improvizované překližky neboli ze třech slepených vrstev dýhy. Z této překližky jsem následně jen vyřezal nožem ony dveře a přilepil je přímo ke kuželu.",
+        "Dále se tento model skládá z otočné hlavy (válce) o průměru 10 cm a výšce 5 cm. Je konstruována stejným způsobem jako hlavní válec, jen s tím rozdílem, že je polepena listy orobince. Jako osa otáčení byl zvolen běžný spojovací kolík, který se používá při sestavování nábytku. Do otoče byl vlepen dřevěný hranol, jenž slouží jako pouzdro kluzného ložiska a zároveň jako kluzné ložisko pro osu vrtule.",
+        "Osa větrného kola je tvořena na soustruhu upraveným stavebním hřebíkem o délce 160 mm. Osu jsem pak ke konci ještě omotal lýkovým provázkem, aby onen stavební hřebík vypadal více staromódně a ve stylu celé stavby. Zakončení krku hřídele je zhotoveno ze dvou částí (válečků o průměru 2,5 cm). Obě tyto části jsou opět opracovány na soustruhu. V první (té větší části) jsou dohromady spojeny lepidlem všechny čtyři trámy perutí, jenž jsou usazeny do předem do kříže vyříznutých drážek. V teto části je také upevněna hlavní osa zasazením do drážky na zadní straně. Druhá část slouží pouze jako čepička (kryt), proto je také mnohem menší a na jedné straně zakulacená. Trámy perutí jsou tvořeny z balzových hranolků o šířce 5 mm, výšce 5 mm a délce 16 cm. Křídla větrného kola, neboli lopaty (perutě), jsem utvořil nalepením obdélníků 3x13cm z již oblíbené perlinky.",
+        "Střecha je prakticky jenom dutý kužel z perlinky. Větší problém však byl vybrat materiál na pokrytí střechy. Rozhodoval jsem se mezi dýhou, senem, slámou, rákosem. Ke každé z těchto variant jsem udělal prototyp, ale nakonec to nevyhrál ani jeden z nich. Vyhrálo to ve finále květenství jakési endemické trávy, jež rostla u nás za barákem, a jejíž název se nám nepodařilo najít ani na internetu. Přes všechny nesnáze jsem ji tam nakonec nalepil a zafixoval jsem ji lakem na vlasy kvůli lepší celistvosti.",
+        "Podstava o rozměrech 30x30cm byla poslední částí, jež mě stála také mnoho času a plánování. Nakonec jsem využil překližku a pokryl ji z větší části anilinovou barvou obarvenými pilinami. Jenom přede dveřmi jsem vysypal zhruba 3 cm široký pás písku jako cestu."
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Závěr",
+      "paragraphs": [
+        "Celý model jsem dával dohromady asi měsíc a půl. Při tvorbě jsem se naučil především, jak na soustruhu opracovávat dřevo do různých tvarů. Soustružení dřeva totiž není jako soustružení železa. Jsou na to totiž potřeba mnohem větší otáčky, protože by se při moc velké „spóně” dřevo mohlo rozštípnout. Nejhlavnější věcí však je řádně si po sobě uklidit soustruh, nejen proto, že to děda vyžaduje, ale také hlavně proto, že dřevěné piliny smíchané společně s chladící emulzí, vytvářejí lepidlo, které už potrápilo nejednoho soustružníka."
+      ]
+    }
+  ],
+  "images": [
+    {
+      "id": "i001",
+      "description": "Hotový mlýn zpředu"
+    },
+    {
+      "id": "i002",
+      "description": "Pokládka šindelů"
+    },
+    {
+      "id": "i003",
+      "description": "Tvorba krajiny okolo mlýna"
+    }
+  ]
+}

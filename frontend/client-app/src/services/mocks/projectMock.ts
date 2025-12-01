@@ -7,16 +7,7 @@ export const projectDetailMock = {
     "gitRepoUrl": "https://github.com/JarousNemec/yt-music-downloader",
     "downloadLabel": "Stáhnout zip projektu",
     "gitRepoLabel": "Repo projektu",
-    "images": [
-        {
-            "url": "https://picsum.photos/seed/project1/800/500",
-            "description": "Náhled hlavního dashboardu aplikace."
-        },
-        {
-            "url": "https://picsum.photos/seed/project2/800/500",
-            "description": "Ukázka nastavení chytrých zařízení."
-        }
-    ],
+    "images": [],
     "sections": [
         {
             "id": "1",

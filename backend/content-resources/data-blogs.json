@@ -1,6 +1,6 @@
 [
     {
-        "id": "blog-0011111111111111111111111111111111",
+        "id": "a001",
         "name": "tech-trends-2025",
         "title": "Technologické trendy roku 2025",
         "description": "Rychlý přehled nejzásadnějších technologických novinek, které dominují roku 2025.",
@@ -8,7 +8,7 @@
         "images": []
     },
     {
-        "id": "blog-002",
+        "id": "a002",
         "name": "healthy-lifestyle-guide",
         "title": "Průvodce zdravým životním stylem",
         "description": "Základní tipy, jak si vybudovat dlouhodobě udržitelný a zdravý životní styl.",
@@ -16,7 +16,7 @@
         "images": []
     },
     {
-        "id": "blog-003",
+        "id": "a003",
         "name": "modern-workplace-productivity",
         "title": "Produktivita v moderním pracovním prostředí",
         "description": "Jak zvýšit efektivitu práce díky novým nástrojům a pracovním metodám.",
@@ -24,7 +24,7 @@
         "images": []
     },
     {
-        "id": "blog-004",
+        "id": "a004",
         "name": "travel-europe-2025",
         "title": "Cestování po Evropě v roce 2025",
         "description": "Nejzajímavější destinace, tipy a trendy pro letošní cestovatelskou sezónu.",
@@ -32,7 +32,7 @@
         "images": []
     },
     {
-        "id": "blog-005",
+        "id": "a005",
         "name": "startup-funding-basics",
         "title": "Základy financování startupů",
         "description": "Co by měl každý zakladatel vědět o investicích, fondech a růstových strategiích.",

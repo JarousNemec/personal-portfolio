@@ -72,19 +72,6 @@ export const blogDetailsMock = {
             ]
         }
     ],
-    "images": [
-        {
-            "url": "https://picsum.photos/seed/ai/800/500",
-            "description": "Moderní AI asistent v domácnosti."
-        },
-        {
-            "url": "https://picsum.photos/seed/ar/800/500",
-            "description": "Ukázka používání AR brýlí při práci."
-        },
-        {
-            "url": "https://picsum.photos/seed/solar/800/500",
-            "description": "Moderní solární technologie."
-        }
-    ]
+    "images": []
 }
 

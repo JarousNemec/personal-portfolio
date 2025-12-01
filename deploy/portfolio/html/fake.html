@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Jaroslav Němec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #f9f9fb;
+            --surface: #ffffff;
+            --muted: #59595d;
+            --text: #22252a;
+            --accent: #0166cb;
+            --accent-2: #0078D4;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 40px 50px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            max-width: 480px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+            animation: fadeIn 0.7s ease-out;
+        }
+
+        img.qg {
+            width: 100%;
+            max-width: 360px;
+            border-radius: 10px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .glow {
+            text-shadow: 0 0 12px rgba(0, 120, 212, 0.35);
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        a.button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        a.button:hover {
+            background: var(--accent-2);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img class="qg" src="https://media1.tenor.com/m/OzvVVsvc53cAAAAd/obiwan-kids.gif" alt="Obiwan Kids GIF">
+    <h1 class="glow">Toto nejsou ty stránky, které hledáte.</h1>
+    <p>
+        Myslím ale, že odkaz níže by Vás mohl zajímat.
+    </p>
+
+    <a class="button" href="https://jarousnemec.cz">Přejít na jarousnemec.cz</a>
+</div>
+
+</body>
+</html>

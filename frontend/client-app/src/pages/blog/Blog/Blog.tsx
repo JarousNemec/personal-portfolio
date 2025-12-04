@@ -23,7 +23,7 @@ const Blog: React.FC<BlogProps> = ({className}) => {
     return (
         <main className={`${className ?? ''} page-container flex-column items-center`}>
             <h1 className={`${styles.title} mb-3`}>{blog.title}</h1>
-            <p className={styles.paragraph}>{blog.description}</p>
+            <p className={`${styles.paragraph} px-5`}>{blog.description}</p>
             <section>
                 <ImageCarousel parentId={blog.id} parentType={"blog"} images={blog.images}
                                className={"flex items-center justify-center gap-4 full-parent-width"}/>

@@ -4,12 +4,12 @@
     max-width: var(--container-max-width);
     min-width: var(--container-min-width);
     margin: 0 auto;
-    padding: 1.25rem;
+    padding: 0.625rem 1.25rem;
   }
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (min-width: var(--breakpoint-md)) {
     .page-container {
-      padding: 0.625rem 1.25rem;
+      padding: 1.25rem;
     }
   }
 }

@@ -1,6 +1,8 @@
+@use '../../../../styles/_variables' as *;
+
 .hero {
   position: relative;
-  padding: 72px 0 64px;
+  padding: 48px 0;
   overflow: hidden;
   background: linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
 }
@@ -8,18 +10,18 @@
 .heroContainer {
   position: relative;
   z-index: 2;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns:1fr
 }
 
 
-@media (max-width: 960px) {
+@media (min-width: $breakpoint-lg) {
   .heroContainer {
-    grid-template-columns:1fr
+    grid-template-columns: 1fr 420px;
   }
 }
 
-@media (max-width: 520px) {
-    .hero {
-        padding: 48px 0
-    }
+@media (min-width: $breakpoint-md) {
+  .hero {
+    padding: 72px 0 64px;
+  }
 }

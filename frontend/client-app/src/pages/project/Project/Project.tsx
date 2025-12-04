@@ -23,7 +23,7 @@ const Project:React.FC<ProjectProps> = ({className}) => {
     return (
         <main className={`${className ?? ''} page-container flex-column items-center`}>
             <h1 className={`${styles.title} mb-3`}>{project.title}</h1>
-            <p className={styles.paragraph}>{project.description}</p>
+            <p className={`${styles.paragraph} px-5`}>{project.description}</p>
             <section>
                 <ImageCarousel parentId={project.id} parentType={"project"} images={project.images}
                                className={"flex items-center justify-center gap-4 full-parent-width"}/>

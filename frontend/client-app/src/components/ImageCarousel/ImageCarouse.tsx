@@ -6,9 +6,10 @@ type ImageCarouselProps = {
     parentId: string
     parentType: string
     images: ArticleImage[];
+    className?: string;
 };
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({parentId, parentType, images }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({parentId, parentType, images, className }) => {
     const [index, setIndex] = useState(0);
 
     const prev = () => {
@@ -27,15 +28,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({parentId, parentType, imag
     const url = `/granery/api/image/${parentType}/${parentId}/${id}`;
 
     return (
-        <div className={styles.carousel}>
+        <div className={className}>
             <button className={styles.navButton} onClick={prev}>‹</button>
 
             <div className={styles.imageWrapper}>
-                <img src={url} alt={description} />
-                <p className={styles.caption}>{description}</p>
+                <img className={`full-parent-width`} src={url} alt={description} />
+                <p className={`${styles.caption} mt-2`}>{description}</p>
             </div>
 
-            <button className={styles.navButton} onClick={next}>›</button>
+            <button className={`${styles.navButton} py-0 px-2 `} onClick={next}>›</button>
         </div>
     );
 };

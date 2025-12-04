@@ -3,4 +3,6 @@
 @use './reset';
 @use './base';
 @use './components' as *;
-@use './utilities';
+@use './utils/index';
+
+@layer reset, base, components, utilities;

@@ -19,7 +19,7 @@ const Blog = () => {
             <h1 className={styles.title}>{blog.title}</h1>
             <p className={styles.paragraph} >{blog.description}</p>
             <main className={styles.main}>
-                <ImageCarousel parentId={blog.id} parentType={"blog"} images={blog.images} />
+                <ImageCarousel parentId={blog.id} parentType={"blog"} images={blog.images} className={"flex items-center justify-center gap-4 full-parent-width"}/>
                 {blog.sections.map(section => (
                     <Section key={"blog-" + blog.id + "-section-" + section.id} id={section.id}
                              title={section.title}

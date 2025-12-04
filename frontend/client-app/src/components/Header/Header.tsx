@@ -5,8 +5,8 @@ import styles from "./header.module.scss"
 const Header = () => {
     return (
         <header className={styles.siteHeader} role="banner">
-            <div className={`${styles.navWrap} ${styles.container}`} role="navigation" aria-label="Hlavní navigace">
-                <HeaderLogo />
+            <div className={`${styles.navWrap} container flex items-center justify-between py-3`} role="navigation" aria-label="Hlavní navigace">
+                <HeaderLogo className={"flex items-center gap-3"} />
                 <HeaderNavigation />
             </div>
         </header>)

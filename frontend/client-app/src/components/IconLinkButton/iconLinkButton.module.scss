@@ -1,32 +1,29 @@
 .contactBtn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: white;
   border: 1px solid #ddd;
-  font-weight: 500;
+  font-weight: var(--font-weight-normal);
   transition: all 0.2s ease;
 }
 
 .variantGithub {
   &:hover {
-    background: #24292e;
+    background: var(--color-github);
     color: white;
   }
 }
 
 .variantEmail {
   &:hover {
-    background: #555;
+    background: var(--color-email);
     color: white;
   }
 }
 
 .variantLinkedin {
   &:hover {
-    background: #0A66C2;
+    background: var(--color-linkedin);
     color: white;
   }
 }

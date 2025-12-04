@@ -15,6 +15,7 @@ interface IconLinkBtnProps {
     label: string;
     icon: React.ReactNode;
     variant: IconLinkBtnVariant;
+    className?: string;
     external?: boolean;
 }
 
@@ -24,9 +25,10 @@ const IconLinkButton: React.FC<IconLinkBtnProps> = ({
                                                         icon,
                                                         variant = "email",
                                                         external = false,
+                                                        className,
                                                     }) => {
 
-    const classes = [
+    const classes = [className,
         styles.contactBtn,
         IconLinkBtnVariantClassMap[variant]
     ]

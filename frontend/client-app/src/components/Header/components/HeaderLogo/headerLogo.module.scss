@@ -1,26 +1,25 @@
 @use '../../../../styles/variables';
 
 .brand {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  font-weight: 700;
+  font-weight: var(--font-weight-bolder);
   color: var(--text);
 }
 
 .logo {
   width: 42px;
   height: 42px;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: var(--radius-md);
+  background: var(--gradient-accent);
   color: white;
-  font-weight: 700;
-  font-size: 18px;
-  box-shadow: 0 6px 16px rgba(0, 120, 212, 0.12);
+  font-weight: var(--font-weight-bolder);
+  font-size: var(--font-size-lg);
+  box-shadow: var(--shadow-logo);
 }
 
-.brandLabel {
-  display: block;
+.brandLabel-title {
+  font-size: var(--font-size-sm); // 14px
+}
+
+.brandLabel-subtitle {
+  font-size: var(--font-size-xs); // 12px
 }

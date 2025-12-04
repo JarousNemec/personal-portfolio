@@ -23,14 +23,17 @@ const ContactSection: React.FC = () => {
 
                 <div className={styles.contactLinks}>
                     <IconLinkButton icon={<EmailIcon/>} variant="email" href="mailto:jarous.nemec@gmail.com"
-                                    label="E-mail" external={true}></IconLinkButton>
+                                    label="E-mail" external={true}
+                                    className={"flex items-center gap-2"}></IconLinkButton>
 
                     <IconLinkButton icon={<GithubIcon/>} variant="github" href="https://github.com/JarousNemec"
-                                    label="GitHub" external={true}></IconLinkButton>
+                                    label="GitHub" external={true}
+                                    className={"flex items-center gap-2"}></IconLinkButton>
 
                     <IconLinkButton icon={<LinkedinIcon/>} variant="linkedin"
                                     href="https://www.linkedin.com/in/jaroslav-n%C4%9Bmec-800a17252/"
-                                    label="LinkedIn" external={true}></IconLinkButton>
+                                    label="LinkedIn" external={true}
+                                    className={"flex items-center gap-2"}></IconLinkButton>
                 </div>
             </div>
 

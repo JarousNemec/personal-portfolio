@@ -1,0 +1,28 @@
+@layer utilities {
+  //block
+  .block {
+    display: block;
+  }
+
+  //grid
+  .grid {
+    display: grid;
+  }
+
+  .place-center {
+    place-items: center;
+  }
+
+  //flex
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+}

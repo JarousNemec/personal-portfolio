@@ -20,7 +20,7 @@ const Project = () => {
             <h1 className={styles.title}>{project.title}</h1>
             <p className={styles.paragraph}>{project.description}</p>
             <main className={styles.main}>
-                <ImageCarousel parentId={project.id} parentType={"project"} images={project.images}/>
+                <ImageCarousel parentId={project.id} parentType={"project"} images={project.images}  className={"flex items-center justify-center gap-4 full-parent-width"}/>
                 {project.sections.map(section => (
                     <Section key={"blog-" + project.id + "-section-" + section.id} id={section.id}
                              title={section.title}

@@ -1,0 +1,15 @@
+@layer utilities {
+  .container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    min-width: var(--container-min-width);
+    margin: 0 auto;
+    padding: 1.25rem;
+  }
+
+  @media (max-width: var(--breakpoint-md)) {
+    .container {
+      padding: 0.625rem 1.25rem;
+    }
+  }
+}

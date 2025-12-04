@@ -1,4 +1,6 @@
-.btn {
+@layer components {
+
+  .btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -11,15 +13,16 @@
     background: var(--accent);
     color: #fff;
     box-shadow: 0 8px 24px rgba(0, 120, 212, 0.12);
-}
+  }
 
-.btn.ghost {
+  .btn.ghost {
     background: transparent;
     color: var(--text);
     border: 1px solid rgba(16, 24, 40, 0.06);
     box-shadow: none;
-}
+  }
 
-.btn:hover {
+  .btn:hover {
     transform: translateY(-3px)
+  }
 }

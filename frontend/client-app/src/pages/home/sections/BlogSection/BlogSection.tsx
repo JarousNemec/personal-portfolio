@@ -5,15 +5,19 @@ import {BlogCard} from "../../../../components/BlogCard/BlogCard.tsx";
 import {useBlogs} from "../../../../hooks/useBlogs.ts";
 import StateMessage from "../../../../components/StateMessage/StateMessage.tsx";
 
-const BlogSection: React.FC = () => {
+type BlogSectionProps = {
+    className?: string;
+}
+
+const BlogSection: React.FC<BlogSectionProps> = ({className}) => {
     const {blogs, loading, error} = useBlogs();
 
     const blogsAvailable = ((blogs && blogs.length > 0) && !loading && !error);
 
     return (
         <>{blogsAvailable &&
-            <Section id={"blog"} title={"Blog & poznámky"} containerClassName={styles.blogsGrid}
-                     containerAriaLabel={"Seznam článků z blogu"} containerRole={"list"}>
+            <Section id={"blog"} title={"Blog & poznámky"} containerClassName={`${styles.blogsGrid} grid gap-5`}
+                     containerAriaLabel={"Seznam článků z blogu"} containerRole={"list"} className={className}>
                 <StateMessage key={"blogs-state-message"} loading={loading}
                               message={!blogsAvailable ? "Zatím jsem ještě nenapsal žádný blog" : undefined}
                               className={"row-center py-8"}/>

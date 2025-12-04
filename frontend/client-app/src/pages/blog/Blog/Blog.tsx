@@ -10,7 +10,7 @@ type BlogProps = {
     className?: string;
 }
 
-const Blog:React.FC<BlogProps> = ({className}) => {
+const Blog: React.FC<BlogProps> = ({className}) => {
     const {id} = useParams();
 
 
@@ -18,18 +18,20 @@ const Blog:React.FC<BlogProps> = ({className}) => {
 
     if (!blog || (error || loading)) return (
         <StateMessage key={"blog-page-stateMessage"} loading={loading}
-                      message={(!blog || error) ? "Článek se nepodařilo načíst... :(" : undefined} className={"row-center py-8"}/>);
+                      message={(!blog || error) ? "Článek se nepodařilo načíst... :(" : undefined}
+                      className={"row-center py-8"}/>);
     return (
-        <div className={`${className} container flex-column items-center`}>
-            <h1 className={styles.title}>{blog.title}</h1>
-            <p className={styles.paragraph} >{blog.description}</p>
-            <main className={styles.main}>
-                <ImageCarousel parentId={blog.id} parentType={"blog"} images={blog.images} className={"flex items-center justify-center gap-4 full-parent-width"}/>
+        <main className={`${className ?? ''} page-container flex-column items-center`}>
+            <h1 className={`${styles.title} mb-3`}>{blog.title}</h1>
+            <p className={styles.paragraph}>{blog.description}</p>
+            <section>
+                <ImageCarousel parentId={blog.id} parentType={"blog"} images={blog.images}
+                               className={"flex items-center justify-center gap-4 full-parent-width"}/>
                 {blog.sections.map(section => (
-                    <Section key={"blog-" + blog.id + "-section-" + section.id} id={section.id}
+                    <Section key={`blog-${blog.id}-section-${section.id}`} id={section.id}
                              title={section.title}
                              containerAriaLabel={section.title}
-                             containerClassName={styles.blogSection}>
+                             containerClassName={`flex-wrap-center gap-1`}>
                         {section.paragraphs.map((paragraph, index) => (
                             <p key={"paragraph-" + section.id + "-" + index} className={styles.paragraph}>
                                 {paragraph}
@@ -37,8 +39,8 @@ const Blog:React.FC<BlogProps> = ({className}) => {
 
                     </Section>
                 ))}
-            </main>
-        </div>
+            </section>
+        </main>
     );
 }
 

@@ -3,13 +3,17 @@ import BlogSection from "../sections/BlogSection/BlogSection.tsx";
 import ProjectsSection from "../sections/ProjectSection/ProjectsSection.tsx";
 import AboutSection from "../sections/AboutSection/AboutSection.tsx";
 import HeroSection from "../sections/HeroSection/HeroSection.tsx";
-import styles from "./home.module.scss";
+import React from "react";
 
-const Home = () => {
-    return (<>
-        <HeroSection/>
+type HomeProps = {
+    className?: string;
+}
 
-        <main className={styles.main}>
+const Home: React.FC<HomeProps> = ({className}) => {
+    return (
+        <main className={className ?? ''}>
+            <HeroSection/>
+
             <AboutSection/>
 
             <ProjectsSection/>
@@ -17,8 +21,7 @@ const Home = () => {
             <BlogSection/>
 
             <ContactSection/>
-        </main>
-    </>)
+        </main>)
 }
 
 export default Home;

@@ -28,7 +28,12 @@
     flex-wrap: wrap;
   }
 
-  .inline-flex{}
+  .flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 
   .items-center {
     align-items: center;
@@ -36,6 +41,10 @@
 
   .justify-between {
     justify-content: space-between;
+  }
+
+  .justify-center {
+    justify-content: center;
   }
 
   .row-between-2 {

@@ -37,7 +37,7 @@ const Section: React.FC<SectionProps> = ({
             </h2>}
 
             <div
-                className={`container ${containerClassName}`}
+                className={`page-container ${containerClassName ? containerClassName : ''}`}
                 aria-label={containerAriaLabel} {...(containerRole ? {"role": containerRole} : {})}>
                 {children}
             </div>

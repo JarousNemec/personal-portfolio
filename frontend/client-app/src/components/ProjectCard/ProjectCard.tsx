@@ -35,7 +35,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <article id={id} className={[styles.project, className].filter(Boolean).join(" ")} role="listitem"
                  aria-labelledby={titleId}>
             <span style={{cursor: "pointer"}} onClick={onClick}>
-                <h3 id={titleId} className={`${styles.cardTitle} mt-2`}>{title}</h3>
+                <h4 id={titleId} className={`${styles.cardTitle} mt-2`}>{title}</h4>
 
                 <p className={`${styles.cardDescription} m-0`}>{description}</p>
 

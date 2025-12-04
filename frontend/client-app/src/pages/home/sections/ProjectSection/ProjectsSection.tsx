@@ -11,7 +11,7 @@ const ProjectsSection: React.FC = () => {
     const projectsAvailable = ((projects && projects.length > 0) && !loading && !error);
     return (
         <>{projectsAvailable &&
-            <Section id={"projects"} title={"Projekty"} containerClassName={styles.projectsGrid}
+            <Section id={"projects"} title={"Projekty"} containerClassName={`${styles.projectsGrid} grid gap-5`}
                      containerAriaLabel={"Seznam projektů"}
                      containerRole={"list"}>
                 <StateMessage key={"projects-state-message"} loading={loading}

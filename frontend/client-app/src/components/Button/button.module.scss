@@ -1,0 +1,25 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 120, 212, 0.12);
+
+  &:hover {
+    transform: translateY(-3px)
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  box-shadow: none;
+}

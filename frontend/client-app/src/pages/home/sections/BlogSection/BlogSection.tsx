@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../../../../components/Section/Section';
+import Section from '../../../../components/Section/Section.tsx';
 import styles from "./blogSection.module.scss"
-import {BlogCard} from "./components/BlogCard/BlogCard.tsx";
+import {BlogCard} from "../../../../components/BlogCard/BlogCard.tsx";
 import {useBlogs} from "../../../../hooks/useBlogs.ts";
 import StateMessage from "../../../../components/StateMessage/StateMessage.tsx";
 
@@ -15,7 +15,8 @@ const BlogSection: React.FC = () => {
             <Section id={"blog"} title={"Blog & poznámky"} containerClassName={styles.blogsGrid}
                      containerAriaLabel={"Seznam článků z blogu"} containerRole={"list"}>
                 <StateMessage key={"blogs-state-message"} loading={loading}
-                              message={!blogsAvailable ? "Zatím jsem ještě nenapsal žádný blog" : undefined}/>
+                              message={!blogsAvailable ? "Zatím jsem ještě nenapsal žádný blog" : undefined}
+                              className={"row-center py-8"}/>
                 {blogsAvailable && (blogs.map((blog, index) => <BlogCard
                     key={blog.id + "-" + index}
                     id={blog.id}

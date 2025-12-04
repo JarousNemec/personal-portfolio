@@ -31,9 +31,12 @@ $breakpoint-xxl: 1440px;
   --space-md: 20px;
   --space-lg: 36px;
 
-  --font-size-sm: 0.875rem;
+  --font-size-xsm: 0.625rem;
   --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
+  --font-size-xlg: 1.25rem;
 
   --font-weight-normal: 400;
   --font-weight-bold: 600;
@@ -49,7 +52,8 @@ $breakpoint-xxl: 1440px;
 
   --transition: 220ms cubic-bezier(.2, .9, .3, 1);
 
-  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-2));
+  --gradient-accent-135: linear-gradient(135deg, var(--accent), var(--accent-2));
+  --gradient-accent-90: linear-gradient(90deg, var(--accent), var(--accent-2));
 
   --shadow-logo: 0 6px 16px rgba(0, 120, 212, 0.12);
   --shadow-soft: 0 6px 18px rgba(16, 24, 40, 0.06);

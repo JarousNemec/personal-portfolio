@@ -18,11 +18,34 @@
     display: flex;
   }
 
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .inline-flex{}
+
   .items-center {
     align-items: center;
   }
 
   .justify-between {
     justify-content: space-between;
+  }
+
+  .row-between-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .row-center {
+    display: flex;
+    justify-content: center;;
   }
 }

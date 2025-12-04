@@ -4,13 +4,14 @@ import styles from "./stateMessage.module.scss";
 interface StateMessageProps {
     loading?: boolean;
     message?: string;
+    className?: string;
 }
 
-const StateMessage: React.FC<StateMessageProps> = ({ loading, message }) => {
+const StateMessage: React.FC<StateMessageProps> = ({loading, message, className}) => {
     // Loading state
     if (loading) {
         return (
-            <div className={styles.wrapper}>
+            <div className={`${className}`}>
                 <div className={styles.spinner}></div>
             </div>
         );
@@ -19,7 +20,7 @@ const StateMessage: React.FC<StateMessageProps> = ({ loading, message }) => {
     // Message (error, empty, no data)
     if (message) {
         return (
-            <div className={styles.wrapper}>
+            <div className={className ? className : ""}>
                 <p className={styles.message}>{message}</p>
             </div>
         );

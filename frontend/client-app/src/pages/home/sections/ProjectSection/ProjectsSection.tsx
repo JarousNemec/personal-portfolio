@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../../../../components/Section/Section';
+import Section from '../../../../components/Section/Section.tsx';
 import styles from './projectsSection.module.scss';
-import {ProjectCard} from "./components/ProjectCard/ProjectCard.tsx";
+import {ProjectCard} from "../../../../components/ProjectCard/ProjectCard.tsx";
 import {useProjects} from "../../../../hooks/useProjects.ts";
 import StateMessage from "../../../../components/StateMessage/StateMessage.tsx";
 
@@ -15,7 +15,8 @@ const ProjectsSection: React.FC = () => {
                      containerAriaLabel={"Seznam projektů"}
                      containerRole={"list"}>
                 <StateMessage key={"projects-state-message"} loading={loading}
-                              message={!projectsAvailable ? "Zatím jsem do portfolia nenahrál žádné projekty..." : undefined}/>
+                              message={!projectsAvailable ? "Zatím jsem do portfolia nenahrál žádné projekty..." : undefined}
+                              className={"row-center py-8"}/>
                 {projects.map((project, index) => <ProjectCard key={project.id + "-" + index} id={project.id}
                                                                title={project.title}
                                                                description={project.description}

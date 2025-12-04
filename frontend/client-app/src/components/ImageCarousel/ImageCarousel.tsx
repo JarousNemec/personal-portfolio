@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styles from "./imageCarousel.module.scss";
 import type {ArticleImage} from "../../../../../shared/models/articleImage.ts";
 
@@ -9,7 +9,7 @@ type ImageCarouselProps = {
     className?: string;
 };
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({parentId, parentType, images, className }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({parentId, parentType, images, className}) => {
     const [index, setIndex] = useState(0);
 
     const prev = () => {
@@ -21,18 +21,19 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({parentId, parentType, imag
     };
 
     if (!images || images.length === 0) {
-        return <p>No images available.</p>;
+        return (
+            <></>);
     }
 
-    const { id, description } = images[index];
+    const {id, description} = images[index];
     const url = `/granery/api/image/${parentType}/${parentId}/${id}`;
 
     return (
-        <div className={className}>
+        <div className={className ? className : ""}>
             <button className={styles.navButton} onClick={prev}>‹</button>
 
             <div className={styles.imageWrapper}>
-                <img className={`full-parent-width`} src={url} alt={description} />
+                <img className={`full-parent-width`} src={url} alt={description}/>
                 <p className={`${styles.caption} mt-2`}>{description}</p>
             </div>
 

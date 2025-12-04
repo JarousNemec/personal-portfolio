@@ -9,17 +9,17 @@
   width: 42px;
   height: 42px;
   border-radius: var(--radius-md);
-  background: var(--gradient-accent);
+  background: var(--gradient-accent-135);
   color: white;
   font-weight: var(--font-weight-bolder);
   font-size: var(--font-size-lg);
   box-shadow: var(--shadow-logo);
 }
 
-.brandLabel-title {
+.brandLabelTitle {
   font-size: var(--font-size-sm); // 14px
 }
 
-.brandLabel-subtitle {
+.brandLabelSubtitle {
   font-size: var(--font-size-xs); // 12px
 }

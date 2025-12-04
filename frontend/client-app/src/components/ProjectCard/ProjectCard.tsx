@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./projectCard.module.scss"
-import type {TagModel} from "../../../../../../../../../shared/models/tagModel.ts";
-import {Tag} from "../../../../../../components/Tag/Tag.tsx";
+import type {TagModel} from "../../../../../shared/models/tagModel.ts";
+import {Tag} from "../Tag/Tag.tsx";
 import {useNavigate} from "react-router-dom";
 
 interface ProjectCardProps {
@@ -13,6 +13,7 @@ interface ProjectCardProps {
     downloadUrl?: string;
     repoUrl?: string;
     repoLabel?: string;
+    className?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -24,26 +25,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                                             downloadUrl,
                                                             repoLabel = "Repo (GitHub)",
                                                             repoUrl,
+                                                            className,
                                                         }) => {
     const navigate = useNavigate();
     const onClick = () => navigate("/project/" + id);
 
     const titleId = "title-" + id;
     return (
-        <article id={id} className={styles.project} role="listitem" aria-labelledby={titleId}>
+        <article id={id} className={[styles.project, className].filter(Boolean).join(" ")} role="listitem"
+                 aria-labelledby={titleId}>
             <span style={{cursor: "pointer"}} onClick={onClick}>
-                <h3 id={titleId} className={styles.cardTitle}>{title}</h3>
+                <h3 id={titleId} className={`${styles.cardTitle} mt-2`}>{title}</h3>
 
-                <p className={styles.cardDescription}>{description}</p>
+                <p className={`${styles.cardDescription} m-0`}>{description}</p>
 
-                <div className={styles.tags} aria-hidden="true">
+                <div className={`flex-wrap mt-3 gap-2`} aria-hidden="true">
                     {tags.map((tag, i) => (
                         <Tag key={id + "-tag-" + i} keyId={id + "-tagSpan-" + i} model={tag}/>
                     ))}
                 </div>
             </span>
 
-            <p className={styles.cardActions}>
+            <p className={`${styles.cardActions} mt-3`}>
                 {downloadUrl && <><a href={downloadUrl} download>
                     {downloadLabel}
                 </a></>}

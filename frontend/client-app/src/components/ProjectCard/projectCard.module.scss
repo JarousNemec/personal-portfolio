@@ -1,7 +1,7 @@
 .project {
   background: var(--surface);
   padding: 18px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(16, 24, 40, 0.03);
   transition: var(--transition);
 
@@ -12,26 +12,16 @@
 }
 
 .cardActions {
-  margin-top: 12px;
   font-size: 0.92rem;
   color: var(--muted);
 }
 
 .cardTitle {
-  margin: 0 0 8px;
   color: var(--text);
   font-size: 1.05rem
 }
 
 .cardDescription {
-  margin: 0;
   color: var(--muted);
   font-size: 0.95rem
-}
-
-.tags {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-  flex-wrap: wrap
 }

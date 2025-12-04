@@ -7,10 +7,10 @@ type HeaderLogoProps = {
 
 const HeaderLogo:React.FC<HeaderLogoProps> = ({className}) => {
     return (
-        <div className={`${styles.brand} ${className}`} aria-hidden="false">
+        <div className={`${[styles.brand, className].filter(Boolean).join(" ")}`} aria-hidden="false">
             <div className={`${styles.logo} grid place-center`} aria-hidden="true">JN</div>
             <div className={`block`}>
-                <div className={styles.brandLabelTitle}>Jaroslav Němec</div>
+                <div className={styles.bra}>Jaroslav Němec</div>
                 <div className={styles.brandLabelSubtitle}>Full-stack vývojář</div>
             </div>
         </div>)

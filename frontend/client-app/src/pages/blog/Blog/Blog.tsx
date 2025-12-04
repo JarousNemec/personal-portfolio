@@ -3,9 +3,14 @@ import Section from "../../../components/Section/Section.tsx";
 import {useParams} from "react-router-dom";
 import {useBlogDetails} from "../../../hooks/useBlogDetails.ts";
 import StateMessage from "../../../components/StateMessage/StateMessage.tsx";
-import ImageCarousel from "../../../components/ImageCarousel/ImageCarouse.tsx";
+import ImageCarousel from "../../../components/ImageCarousel/ImageCarousel.tsx";
+import React from "react";
 
-const Blog = () => {
+type BlogProps = {
+    className?: string;
+}
+
+const Blog:React.FC<BlogProps> = ({className}) => {
     const {id} = useParams();
 
 
@@ -13,9 +18,9 @@ const Blog = () => {
 
     if (!blog || (error || loading)) return (
         <StateMessage key={"blog-page-stateMessage"} loading={loading}
-                      message={(!blog || error) ? "Článek se nepodařilo načíst... :(" : undefined}/>);
+                      message={(!blog || error) ? "Článek se nepodařilo načíst... :(" : undefined} className={"row-center py-8"}/>);
     return (
-        <div className={styles.container}>
+        <div className={`${className} container flex-column items-center`}>
             <h1 className={styles.title}>{blog.title}</h1>
             <p className={styles.paragraph} >{blog.description}</p>
             <main className={styles.main}>

@@ -1,4 +1,4 @@
-@use '../../../../styles/variables';
+@use '../../../../styles/_variables' as *;
 
 .menu {
     transition: transform .3s ease, opacity .3s ease;
@@ -19,7 +19,7 @@
 }
 
 .burger {
-    display: none;
+    display: block;
     width: 40px;
     height: 40px;
 
@@ -27,9 +27,8 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0; // přesná velikost bez výplně
+    padding: 0;
 
-    /* 3 linky */
     span {
         position: absolute;
         left: 50%;
@@ -38,72 +37,77 @@
         background: var(--text);
         border-radius: 3px;
         transition: transform .3s ease, opacity .3s ease;
-        transform: translateX(-50%); // centrování horizontálně
+        transform: translateX(-50%);
     }
 
-    /* Linka 1 */
     span:nth-child(1) {
         top: 12px;
     }
 
-    /* Linka 2 */
     span:nth-child(2) {
-        top: 18.5px; // přesný střed mezi 12 a 25
+        top: 18.5px;
     }
 
-    /* Linka 3 */
     span:nth-child(3) {
         top: 25px;
     }
 }
 
-@media (max-width: variables.$breakpoint-md) {
+.burger.open {
+    span:nth-child(1) {
+        transform: translate(-50%, 6.5px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+        opacity: 0;
+    }
+
+    span:nth-child(3) {
+        transform: translate(-50%, -6.5px) rotate(-45deg);
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (min-width: $breakpoint-md) {
 
     .burger {
-        display: block;
-        z-index: 200;
+        display: none;
     }
 
-    /* OPEN STATE → cross (X) */
-    .burger.open {
-
-        span:nth-child(1) {
-            transform: translate(-50%, 6.5px) rotate(45deg);
-        }
-
-        span:nth-child(2) {
-            opacity: 0;
-        }
-
-        span:nth-child(3) {
-            transform: translate(-50%, -6.5px) rotate(-45deg);
-        }
-    }
-
-    /* === Mobile dropdown === */
     .menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: var(--bg);
-        padding: 16px;
-        border-radius: 8px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-
-        transform: translateY(-10px);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform .3s ease, opacity .3s ease;
-    }
-
-    .menuOpen {
-        transform: translateY(0);
+        position: static;
+        transform: none;
         opacity: 1;
         pointer-events: auto;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
     }
 }

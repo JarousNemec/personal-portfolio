@@ -6,12 +6,13 @@ export interface BlogCardProps {
     id: string;
     title: string;
     description: string;
+    className?: string;
 }
 
 export const BlogCard: React.FC<BlogCardProps> = ({
                                                       id,
                                                       title,
-                                                      description,
+                                                      description, className
                                                   }) => {
     const navigate = useNavigate();
     const onClick = () => navigate("/blog/" + id);
@@ -20,13 +21,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     return (
         <article
             id={id}
-            className={`${styles.blogCard}`.trim()}
+            className={[styles.blogCard, className].filter(Boolean).join(" ")}
             role="listitem"
             aria-labelledby={titleId}
             onClick={onClick}
         >
-            <h4 id={titleId} className={styles.blogTitle}>{title}</h4>
-            <p className={styles.blogDescription}>{description}</p>
+            <h4 id={titleId} className={`${styles.blogTitle} mt-2`}>{title}</h4>
+            <p className={`${styles.blogDescription} m-0`}>{description}</p>
         </article>
     );
 };

@@ -34,6 +34,10 @@
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 
   //padding X
   .px-0 {
@@ -67,8 +71,28 @@
   }
 
   //margin
+  .m-0{
+    margin: 0 !important;
+  }
+
   .mt-2{
     margin-top: 0.5rem;
+  }
+
+  .mt-3{
+    margin-top: 0.75rem;
+  }
+
+  .mt-4{
+    margin-top: 1rem;
+  }
+
+  .mt-5{
+    margin-top: 1.25rem;
+  }
+
+  .mb-3{
+    margin-bottom: 0.75rem;
   }
 
   //gaps
@@ -86,5 +110,9 @@
 
   .gap-4 {
     gap: 1rem;
+  }
+
+  .gap-8 {
+    gap: 2rem;
   }
 }

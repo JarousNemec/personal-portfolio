@@ -17,7 +17,7 @@ const BlogSection: React.FC<BlogSectionProps> = ({className}) => {
     return (
         <>{blogsAvailable &&
             <Section id={"blog"} title={"Blog & poznámky"} containerClassName={`${styles.blogsGrid} grid gap-5`}
-                     containerAriaLabel={"Seznam článků z blogu"} containerRole={"list"} className={className}>
+                     containerAriaLabel={"Seznam článků z blogu"} className={className}>
                 <StateMessage key={"blogs-state-message"} loading={loading}
                               message={!blogsAvailable ? "Zatím jsem ještě nenapsal žádný blog" : undefined}
                               className={"row-center py-8"}/>

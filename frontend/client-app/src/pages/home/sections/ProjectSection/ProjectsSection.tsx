@@ -12,8 +12,7 @@ const ProjectsSection: React.FC = () => {
     return (
         <>{projectsAvailable &&
             <Section id={"projects"} title={"Projekty"} containerClassName={`${styles.projectsGrid} grid gap-5`}
-                     containerAriaLabel={"Seznam projektů"}
-                     containerRole={"list"}>
+                     containerAriaLabel={"Seznam projektů"}>
                 <StateMessage key={"projects-state-message"} loading={loading}
                               message={!projectsAvailable ? "Zatím jsem do portfolia nenahrál žádné projekty..." : undefined}
                               className={"row-center py-8"}/>

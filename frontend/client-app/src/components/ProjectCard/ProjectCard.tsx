@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     const titleId = "title-" + id;
     return (
 
-        <article id={id} className={[styles.project, className].filter(Boolean).join(" ")} role="listitem"
+        <article id={id} className={[styles.project, className].filter(Boolean).join(" ")}
                  aria-labelledby={titleId}>
             <Link to={`/blog/${id}`}>
                 <h4 id={titleId} className={`${styles.cardTitle} mt-2`}>{title}</h4>

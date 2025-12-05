@@ -22,7 +22,6 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         >
             <article
                 id={id}
-                role="listitem"
                 aria-labelledby={titleId}
             >
                 <h4 id={titleId} className={`${styles.blogTitle} mt-2`}>{title}</h4>

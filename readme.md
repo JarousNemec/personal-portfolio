@@ -77,4 +77,4 @@ Stačí otevřít soubor `index.html` v prohlížeči.
 
 ## 📄 Licence
 Projekt je určen pro studijní a osobní prezentaci.  
-© 2025 Jan Novák
+© 2025 Jaroslav Němec

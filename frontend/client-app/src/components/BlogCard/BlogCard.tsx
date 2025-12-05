@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./blogCard.module.scss"
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export interface BlogCardProps {
     id: string;
@@ -14,20 +14,20 @@ export const BlogCard: React.FC<BlogCardProps> = ({
                                                       title,
                                                       description, className
                                                   }) => {
-    const navigate = useNavigate();
-    const onClick = () => navigate("/blog/" + id);
 
     const titleId = "title-" + id;
     return (
-        <article
-            id={id}
-            className={[styles.blogCard, className].filter(Boolean).join(" ")}
-            role="listitem"
-            aria-labelledby={titleId}
-            onClick={onClick}
+        <Link to={`/blog/${id}`}
+              className={[styles.blogCard, className].filter(Boolean).join(" ")}
         >
-            <h4 id={titleId} className={`${styles.blogTitle} mt-2`}>{title}</h4>
-            <p className={`${styles.blogDescription} m-0`}>{description}</p>
-        </article>
+            <article
+                id={id}
+                role="listitem"
+                aria-labelledby={titleId}
+            >
+                <h4 id={titleId} className={`${styles.blogTitle} mt-2`}>{title}</h4>
+                <p className={`${styles.blogDescription} m-0`}>{description}</p>
+            </article>
+        </Link>
     );
 };

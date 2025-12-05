@@ -4,11 +4,12 @@
   border-radius: var(--radius-lg);
   border: 1px solid rgba(16, 24, 40, 0.03);
   transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-hover);
-    cursor: pointer;
   }
 }
 

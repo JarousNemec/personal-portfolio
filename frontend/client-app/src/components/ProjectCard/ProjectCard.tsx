@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./projectCard.module.scss"
 import type {TagModel} from "../../../../../shared/models/tagModel.ts";
 import {Tag} from "../Tag/Tag.tsx";
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 interface ProjectCardProps {
     id: string;
@@ -27,14 +27,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                                             repoUrl,
                                                             className,
                                                         }) => {
-    const navigate = useNavigate();
-    const onClick = () => navigate("/project/" + id);
-
     const titleId = "title-" + id;
     return (
+
         <article id={id} className={[styles.project, className].filter(Boolean).join(" ")} role="listitem"
                  aria-labelledby={titleId}>
-            <span style={{cursor: "pointer"}} onClick={onClick}>
+            <Link to={`/blog/${id}`}>
                 <h4 id={titleId} className={`${styles.cardTitle} mt-2`}>{title}</h4>
 
                 <p className={`${styles.cardDescription} m-0`}>{description}</p>
@@ -44,19 +42,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         <Tag key={id + "-tag-" + i} keyId={id + "-tagSpan-" + i} model={tag}/>
                     ))}
                 </div>
-            </span>
-
+            </Link>
             <p className={`${styles.cardActions} mt-3`}>
-                {downloadUrl && <><a href={downloadUrl} download>
+                {downloadUrl && <><a href={downloadUrl} className={styles.pageRedirect}>
                     {downloadLabel}
                 </a></>}
                 {(downloadUrl && repoUrl) && <>
                     {" "}•{" "}
                 </>}
-                {repoUrl && <><a href={repoUrl}>
+                {repoUrl && <><a href={repoUrl} className={styles.pageRedirect}>
                     {repoLabel}
                 </a></>}
             </p>
         </article>
+
     );
 };

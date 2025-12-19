@@ -1,6 +1,5 @@
 import React from 'react';
 import Section from '../../../../components/Section/Section.tsx';
-import styles from './projectsSection.module.scss';
 import {ProjectCard} from "../../../../components/ProjectCard/ProjectCard.tsx";
 import {useProjects} from "../../../../hooks/useProjects.ts";
 import StateMessage from "../../../../components/StateMessage/StateMessage.tsx";
@@ -11,7 +10,7 @@ const ProjectsSection: React.FC = () => {
     const projectsAvailable = ((projects && projects.length > 0) && !loading && !error);
     return (
         <>{projectsAvailable &&
-            <Section id={"projects"} title={"Projekty"} containerClassName={`${styles.projectsGrid} grid gap-5`}
+            <Section id={"projects"} title={"Projekty"} containerClassName={`grid-cards justify-between gap-5`}
                      containerAriaLabel={"Seznam projektů"}>
                 <StateMessage key={"projects-state-message"} loading={loading}
                               message={!projectsAvailable ? "Zatím jsem do portfolia nenahrál žádné projekty..." : undefined}

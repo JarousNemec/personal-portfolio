@@ -32,7 +32,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
         <article id={id} className={[styles.project, className].filter(Boolean).join(" ")}
                  aria-labelledby={titleId}>
-            <Link to={`/blog/${id}`}>
+            <Link to={`/project/${id}`}>
                 <h4 id={titleId} className={`${styles.cardTitle} mt-2`}>{title}</h4>
 
                 <p className={`${styles.cardDescription} m-0`}>{description}</p>

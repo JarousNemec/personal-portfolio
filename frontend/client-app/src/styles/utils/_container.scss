@@ -9,7 +9,7 @@
 
   @media (min-width: var(--breakpoint-md)) {
     .page-container {
-      padding: 1.25rem;
+      padding: var(--spacing-5);
     }
   }
 }
